@@ -134,15 +134,15 @@ class PigmentWindow(Adw.ApplicationWindow):
             main_button_content.append(ColorBox(color.raw_rgb))
 
 
-
+            default_text = (color.hex, color.rgb, color.hsl, color.hsv)[self.settings.get_value('default-format').unpack()]
             main_button_content.append(
                 Gtk.Label(
-                    label=(color.hex, color.rgb, color.hsl, color.hsv)[self.settings.get_value('default-format').unpack()]
+                    label=default_text
                 )
             )
             button.set_child(main_button_content)
             button.set_popover(ColorPopover(color))
-            button.connect('clicked', lambda button, text=color.rgb: self.copy_requested(text))
+            button.connect('clicked', lambda button, text=default_text: self.copy_requested(text))
             main_button_content.get_parent().add_css_class('p0')
             GLib.idle_add(wbox.append, button)
         GLib.idle_add(self.palette_container.set_child, wbox)
