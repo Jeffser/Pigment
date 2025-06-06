@@ -28,6 +28,8 @@ from .window import PigmentWindow
 
 
 class PigmentApplication(Adw.Application):
+    __gtype_name__ = 'PigmentApplication'
+
     def __init__(self):
         super().__init__(application_id='com.jeffser.Pigment',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
