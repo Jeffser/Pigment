@@ -49,8 +49,8 @@ class PigmentApplication(Adw.Application):
                                 application_icon='com.jeffser.Pigment',
                                 developer_name='Jeffry Samuel Eduarte Rojas',
                                 version=self.version,
-                                developers=['Jeffry Samuel Eduarte Rojas'],
-                                copyright='© 2025 Jeffry Samuel Eduarte Rojas')
+                                developers=['Jeffry Samuel Eduarte Rojas https://github.com/Jeffser'],
+                                copyright='© 2025 Jeffry Samuel Eduarte Rojas\nBased on Color Thief')
         about.set_translator_credits(_('translator-credits'))
         about.present(self.props.active_window)
 
