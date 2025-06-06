@@ -67,14 +67,10 @@
   </screenshots>
 
   <releases>
-    <release version="1.0.1" date="2024-01-18">
-      <url type="details">https://example.org/changelog.html#version_1.0.1</url>
-      <description translate="no">
-        <p>Release description</p>
-        <ul>
-          <li>List of changes</li>
-          <li>List of changes</li>
-        </ul>
+    <release version="0.1.0" date="2025-06-06">
+      <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.1.0</url>
+      <description>
+        <p>Initial Release</p>
       </description>
     </release>
   </releases>
