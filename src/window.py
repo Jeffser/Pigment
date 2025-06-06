@@ -19,7 +19,7 @@
 
 from gi.repository import Gtk, Adw, Gio, Gdk, GLib
 
-import os, mimetypes, threading
+import os, threading
 from colorthief import ColorThief
 
 from .color_converters import Color
@@ -90,6 +90,22 @@ class PigmentWindow(Adw.ApplicationWindow):
     autogenerate_switch = Gtk.Template.Child()
     default_format_switch = Gtk.Template.Child()
 
+    image_mimetypes = (
+        'image/png',
+        'image/jpeg',
+        'image/gif',
+        'image/webp',
+        'image/bmp',
+        'image/tiff'
+    )
+
+    def get_image_filter(self) -> Gtk.FileFilter:
+        file_filter = Gtk.FileFilter()
+        file_filter.set_name(_("Image files"))
+        for mime in self.image_mimetypes:
+            file_filter.add_mime_type(mime)
+        return file_filter
+
     def copy_requested(self, text:str):
         Gdk.Display().get_default().get_clipboard().set(text)
         self.toast_overlay.add_toast(
@@ -154,8 +170,8 @@ class PigmentWindow(Adw.ApplicationWindow):
 
     def on_upload(self, file:Gio.File):
         if file.get_path():
-            mime_type, _ = mimetypes.guess_type(file.get_path())
-            if mime_type and mime_type.startswith('image/') and 'svg' not in mime_type and 'x-icon' not in mime_type:
+            mimetype = file.query_info('standard::content-type', Gio.FileQueryInfoFlags.NONE, None).get_content_type()
+            if mimetype in self.image_mimetypes:
                 self.picture_overlay.get_child().set_file(file)
                 self.main_stack.set_visible_child_name('content')
                 if bool(self.settings.get_value('autogenerate').unpack()):
@@ -171,17 +187,8 @@ class PigmentWindow(Adw.ApplicationWindow):
             except GLib.GError as e:
                 print(e)
 
-        file_filter = Gtk.FileFilter()
-        file_filter.set_name(_("Image files"))
-
-        file_filter.add_mime_type("image/png")
-        file_filter.add_mime_type("image/jpeg")
-        file_filter.add_mime_type("image/gif")
-        file_filter.add_mime_type("image/webp")
-        file_filter.add_mime_type("image/bmp")
-        file_filter.add_mime_type("image/tiff")
         filter_list = Gio.ListStore.new(Gtk.FileFilter)
-        filter_list.append(file_filter)
+        filter_list.append(self.get_image_filter())
 
         Gtk.FileDialog(
             filters=filter_list
