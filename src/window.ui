@@ -120,6 +120,7 @@
                                     </child>
                                     <child>
                                       <object class="AdwPreferencesGroup">
+                                        <property name="valign">3</property>
                                         <child>
                                           <object class="AdwSpinRow" id="preference_quality">
                                             <property name="title" translatable="yes">Quality</property>
