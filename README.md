@@ -25,7 +25,12 @@
 
 ## Installation
 
-TODO
+Pigment is distributed with Flatpak, make sure your distribution supports Flatpak before installing Pigment.
+
+1. Download the latest Flatpak package from the [releases page](https://github.com/Jeffser/Pigment/releases).
+2. Open it
+3. Install
+4. Enjoy
 
 ## Thanks
 
