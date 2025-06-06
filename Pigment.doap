@@ -5,7 +5,7 @@
          xmlns="http://usefulinc.com/ns/doap#">
 
   <name xml:lang="en">Pigment</name>
-  <shortdesc xml:lang="en">An Ollama client made with GTK4 and Adwaita</shortdesc>
+  <shortdesc xml:lang="en">Extract color palettes from your images</shortdesc>
   <homepage rdf:resource="https://jeffser.com/pigment" />
   <bug-database rdf:resource="https://github.com/Jeffser/Pigment/issues"/>
   <programming-language>Python</programming-language>
