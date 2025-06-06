@@ -30,10 +30,11 @@ from .window import PigmentWindow
 class PigmentApplication(Adw.Application):
     __gtype_name__ = 'PigmentApplication'
 
-    def __init__(self):
+    def __init__(self, version):
         super().__init__(application_id='com.jeffser.Pigment',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
                          resource_base_path='/com/jeffser/Pigment')
+        self.version = version
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
 
@@ -47,7 +48,7 @@ class PigmentApplication(Adw.Application):
         about = Adw.AboutDialog(application_name='Pigment',
                                 application_icon='com.jeffser.Pigment',
                                 developer_name='Jeffry Samuel Eduarte Rojas',
-                                version='0.1.0',
+                                version=self.version,
                                 developers=['Jeffry Samuel Eduarte Rojas'],
                                 copyright='© 2025 Jeffry Samuel Eduarte Rojas')
         about.set_translator_credits(_('translator-credits'))
@@ -62,5 +63,5 @@ class PigmentApplication(Adw.Application):
 
 
 def main(version):
-    app = PigmentApplication()
+    app = PigmentApplication(version)
     return app.run(sys.argv)
