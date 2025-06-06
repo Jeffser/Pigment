@@ -155,7 +155,7 @@ class PigmentWindow(Adw.ApplicationWindow):
     def on_upload(self, file:Gio.File):
         if file.get_path():
             mime_type, _ = mimetypes.guess_type(file.get_path())
-            if mime_type and mime_type.startswith('image/'):
+            if mime_type and mime_type.startswith('image/') and 'svg' not in mime_type and 'x-icon' not in mime_type:
                 self.picture_overlay.get_child().set_file(file)
                 self.main_stack.set_visible_child_name('content')
                 if bool(self.settings.get_value('autogenerate').unpack()):
@@ -171,10 +171,17 @@ class PigmentWindow(Adw.ApplicationWindow):
             except GLib.GError as e:
                 print(e)
 
-        image_filter = Gtk.FileFilter()
-        image_filter.add_pixbuf_formats()
+        file_filter = Gtk.FileFilter()
+        file_filter.set_name(_("Image files"))
+
+        file_filter.add_mime_type("image/png")
+        file_filter.add_mime_type("image/jpeg")
+        file_filter.add_mime_type("image/gif")
+        file_filter.add_mime_type("image/webp")
+        file_filter.add_mime_type("image/bmp")
+        file_filter.add_mime_type("image/tiff")
         filter_list = Gio.ListStore.new(Gtk.FileFilter)
-        filter_list.append(image_filter)
+        filter_list.append(file_filter)
 
         Gtk.FileDialog(
             filters=filter_list
