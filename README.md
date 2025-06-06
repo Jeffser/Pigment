@@ -5,4 +5,4 @@
 
 ---
 
-
+Made using [ColorThief](https://github.com/fengsp/color-thief-py).
