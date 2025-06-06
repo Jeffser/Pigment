@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.jeffser.Pigment.desktop.in
+data/com.jeffser.Pigment.metainfo.xml.in
+data/com.jeffser.Pigment.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

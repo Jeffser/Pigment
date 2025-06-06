@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=pigment
+Exec=pigment
+Icon=com.jeffser.Pigment
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

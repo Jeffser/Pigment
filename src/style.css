@@ -1,0 +1,16 @@
+.picture_indicator {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.picture_indicator:hover, .picture_button:drop(active) .picture_indicator, .picture_button:focus .picture_indicator {
+  opacity: 0.75;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.p10 {
+  padding: 10px;
+}
