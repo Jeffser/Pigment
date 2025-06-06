@@ -49,7 +49,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/tentri/Projects"
+                    "url" : "https://github.com/Jeffser/Pigment.git",
+                    "branch": "main"
                 }
             ]
         }
