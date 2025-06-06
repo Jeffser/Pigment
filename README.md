@@ -11,6 +11,8 @@
 > [!WARNING]
 > AI generated issues and PRs will be denied, repeated offense will result in a ban from the repository.
 
+- [Initial Annoucement in Alpaca](https://github.com/Jeffser/Alpaca/discussions/793)
+
 ## Screenies
 
 <img src="https://jeffser.com/images/pigment/screenie1.png">
