@@ -66,6 +66,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.3.0" date="2025-06-07">
+      <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.3.0</url>
+      <description>
+        <p>Added option to capitalize colors</p>
+        <p>Better metadata for distribution</p>
+      </description>
+    </release>
     <release version="0.2.0" date="2025-06-06">
       <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.2.0</url>
       <description>
