@@ -13,6 +13,9 @@
 	  <key name="autogenerate" type="b">
 	    <default>true</default>
 	  </key>
+	  <key name="format-uppercase" type="b">
+	    <default>false</default>
+	  </key>
 	  <key name="default-format" type="i">
 	    <default>0</default>
 	  </key>

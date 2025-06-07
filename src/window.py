@@ -57,8 +57,9 @@ class ColorPopover(Gtk.Popover):
 
         for c in color.menu_options:
             button = Gtk.Button(
-                child=Gtk.Label(
+                child=Adw.ButtonContent(
                     label=c,
+                    icon_name='edit-copy-symbolic',
                     hexpand=True,
                     halign=1
                 ),
@@ -88,6 +89,7 @@ class PigmentWindow(Adw.ApplicationWindow):
 
     preferences_dialog = Gtk.Template.Child()
     autogenerate_switch = Gtk.Template.Child()
+    uppercase_switch = Gtk.Template.Child()
     default_format_switch = Gtk.Template.Child()
 
     image_mimetypes = (
@@ -123,7 +125,10 @@ class PigmentWindow(Adw.ApplicationWindow):
             justify_last_line=1
         )
         for c in palette:
-            color = Color(c)
+            color = Color(
+                rgb=c,
+                uppercase=self.settings.get_value('format-uppercase').unpack()
+            )
 
             button = Adw.SplitButton(
                 overflow=1,
@@ -226,6 +231,13 @@ class PigmentWindow(Adw.ApplicationWindow):
         self.settings.bind(
             'autogenerate',
             self.autogenerate_switch,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        )
+
+        self.settings.bind(
+            'format-uppercase',
+            self.uppercase_switch,
             'active',
             Gio.SettingsBindFlags.DEFAULT
         )

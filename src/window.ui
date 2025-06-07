@@ -224,6 +224,11 @@
                 </object>
               </child>
               <child>
+                <object class="AdwSwitchRow" id="uppercase_switch">
+                  <property name="title" translatable="yes">Display Colors in Uppercase</property>
+                </object>
+              </child>
+              <child>
                 <object class="AdwComboRow" id="default_format_switch">
                   <property name="title" translatable="yes">Default Color Format</property>
                   <property name="model">
