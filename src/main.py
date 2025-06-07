@@ -51,7 +51,7 @@ class PigmentApplication(Adw.Application):
                                 version=self.version,
                                 developers=['Jeffry Samuel Eduarte Rojas https://github.com/Jeffser'],
                                 copyright='© 2025 Jeffry Samuel Eduarte Rojas\nBased on Color Thief')
-        about.set_translator_credits(_('translator-credits'))
+        about.set_translator_credits('Jeffry Samuel (Spanish) https://github.com/jeffser')
         about.present(self.props.active_window)
 
     def create_action(self, name, callback, shortcuts=None):

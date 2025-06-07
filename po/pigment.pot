@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-06 20:51-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:7 src/window.ui:6
+msgid "Pigment"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:8
+msgid "Extract color palettes from your images"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:10
+msgid ""
+"Pigment allows you to extract a palette of colors from your images offline. "
+"You can select the speed and accuracy by modifying the number and quality of "
+"colors."
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:53
+msgid "Example image showing fishes"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:57
+msgid "Example image showing Niko from Oneshot"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:61
+msgid "Example image showing an alpaca"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:65
+msgid "Example image showing a Japanese painting"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Initial Release"
+msgstr ""
+
+#: src/window.py:66 src/window.py:131
+msgid "Copy Color"
+msgstr ""
+
+#: src/window.py:104
+msgid "Image files"
+msgstr ""
+
+#: src/window.py:113
+msgid "Color copied to clipboard."
+msgstr ""
+
+#: src/window.ui:23
+msgid "Main Menu"
+msgstr ""
+
+#: src/window.ui:39
+msgid "Select an image to get started!"
+msgstr ""
+
+#: src/window.ui:47
+msgid "Upload Image"
+msgstr ""
+
+#: src/window.ui:126
+msgid "Quality"
+msgstr ""
+
+#: src/window.ui:139
+msgid "Number of Colors"
+msgstr ""
+
+#: src/window.ui:152
+msgid "Generate Palette"
+msgstr ""
+
+#: src/window.ui:175
+msgid "Start by generating a palette"
+msgstr ""
+
+#: src/window.ui:223
+msgid "Autogenerate Palette After Uploading Image"
+msgstr ""
+
+#: src/window.ui:228
+msgid "Default Color Format"
+msgstr ""
+
+#: src/window.ui:250
+msgid "Preferences"
+msgstr ""
+
+#: src/window.ui:254
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/window.ui:258
+msgid "About Pigment"
+msgstr ""
