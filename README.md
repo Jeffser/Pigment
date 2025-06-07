@@ -3,6 +3,8 @@
 
 <p align="center">Pigment allows you to quickly extract a color palette from any image offline.</p>
 
+<p align="center"><a href='https://flathub.org/apps/com.jeffser.Pigment'><img width='190' alt='Download on Flathub' src='https://flathub.org/api/badge?locale=en'/></a></p>
+
 ---
 
 > [!IMPORTANT]
@@ -24,6 +26,16 @@
 <img src="https://jeffser.com/images/pigment/screenie4.png">
 
 ## Installation
+
+### Flathub
+
+Use your system's app store to find Pigment or run this command to install it.
+
+```BASH
+flatpak install com.jeffser.Pigment
+```
+
+### Package
 
 Pigment is distributed with Flatpak, make sure your distribution supports Flatpak before installing Pigment.
 
