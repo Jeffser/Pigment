@@ -30,7 +30,7 @@ pigment_sources = [
   '__init__.py',
   'main.py',
   'window.py',
-  'color_converters.py'
+  'widgets.py'
 ]
 
 install_data(pigment_sources, install_dir: moduledir)

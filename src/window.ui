@@ -16,6 +16,16 @@
       <object class="AdwToolbarView">
         <child type="top">
           <object class="AdwHeaderBar">
+            <child type="start">
+              <object class="GtkButton">
+                <property name="icon-name">edit-copy-symbolic</property>
+                <property name="action-name">app.copy_all</property>
+                <property name="tooltip-text" translatable="yes">Copy Palette</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+              </object>
+            </child>
             <child type="end">
               <object class="GtkMenuButton">
                 <property name="primary">True</property>

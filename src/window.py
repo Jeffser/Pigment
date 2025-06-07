@@ -22,56 +22,8 @@ from gi.repository import Gtk, Adw, Gio, Gdk, GLib
 import os, threading
 from colorthief import ColorThief
 
-from .color_converters import Color
+from .widgets import Color
 
-class ColorBox(Gtk.DrawingArea):
-    __gtype_name__ = 'PigmentColorBox'
-
-    def __init__(self, rgb:tuple, size=32):
-        super().__init__()
-        self.rgb = rgb
-        self.set_content_width(size)
-        self.set_content_height(size)
-        self.set_overflow(1)
-
-        self.set_draw_func(self.draw_color)
-
-    def draw_color(self, area, cr, width, height):
-        cr.set_source_rgb(*[c / 255.0 for c in self.rgb])
-        cr.rectangle(0, 0, width, height)
-        cr.fill()
-
-class ColorPopover(Gtk.Popover):
-    __gtype_name__ = 'PigmentPopover'
-
-    def __init__(self, color:Color):
-        container = Gtk.Box(
-            orientation=1
-        )
-
-        super().__init__(
-            has_arrow=True,
-            autohide=True,
-            child=container
-        )
-
-        for c in color.menu_options:
-            button = Gtk.Button(
-                child=Adw.ButtonContent(
-                    label=c,
-                    icon_name='edit-copy-symbolic',
-                    hexpand=True,
-                    halign=1
-                ),
-                css_classes=['flat', 'monospace', 'small'],
-                tooltip_text=_('Copy Color')
-            )
-            button.connect('clicked', lambda button, text=c: self.copy(text))
-            container.append(button)
-
-    def copy(self, text):
-        self.popdown()
-        self.get_root().copy_requested(text)
 
 @Gtk.Template(resource_path='/com/jeffser/Pigment/window.ui')
 class PigmentWindow(Adw.ApplicationWindow):
@@ -112,10 +64,16 @@ class PigmentWindow(Adw.ApplicationWindow):
         Gdk.Display().get_default().get_clipboard().set(text)
         self.toast_overlay.add_toast(
             Adw.Toast(
-                title=_('Color copied to clipboard.'),
-                timeout=2
+                title=_('Palette copied to clipboard.') if '\n' in text else _('Color copied to clipboard.'),
+                timeout=1
             )
         )
+
+    def copy_all_requested(self):
+        colors = []
+        for widget in list(self.palette_container.get_child()):
+            colors.append(widget.get_name())
+        self.copy_requested('\n'.join(colors))
 
     def on_generate(self, palette:list):
         wbox = Adw.WrapBox(
@@ -127,34 +85,16 @@ class PigmentWindow(Adw.ApplicationWindow):
         for c in palette:
             color = Color(
                 rgb=c,
-                uppercase=self.settings.get_value('format-uppercase').unpack()
+                uppercase=self.settings.get_value('format-uppercase').unpack(),
+                default_index=self.settings.get_value('default-format').unpack()
             )
-
-            button = Adw.SplitButton(
-                overflow=1,
-                css_classes=['monospace'],
-                tooltip_text=_('Copy Color')
-            )
-            main_button_content = Gtk.Box(spacing=10, margin_end=10)
-            main_button_content.append(ColorBox(color.raw_rgb))
-
-
-            default_text = (color.hex, color.rgb, color.hsl, color.hsv)[self.settings.get_value('default-format').unpack()]
-            main_button_content.append(
-                Gtk.Label(
-                    label=default_text
-                )
-            )
-            button.set_child(main_button_content)
-            button.set_popover(ColorPopover(color))
-            button.connect('clicked', lambda button, text=default_text: self.copy_requested(text))
-            main_button_content.get_parent().add_css_class('p0')
-            GLib.idle_add(wbox.append, button)
+            GLib.idle_add(wbox.append, color.button)
         GLib.idle_add(self.palette_container.set_child, wbox)
 
     def generate_requested(self):
         GLib.idle_add(self.get_application().lookup_action('upload').set_enabled, False)
         GLib.idle_add(self.get_application().lookup_action('generate').set_enabled, False)
+        GLib.idle_add(self.get_application().lookup_action('copy_all').set_enabled, False)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'loading')
         GLib.idle_add(self.palette_container.set_child, None)
         picture = self.picture_overlay.get_child().get_file()
@@ -171,6 +111,7 @@ class PigmentWindow(Adw.ApplicationWindow):
                     self.on_generate(palette[:number])
         GLib.idle_add(self.get_application().lookup_action('upload').set_enabled, True)
         GLib.idle_add(self.get_application().lookup_action('generate').set_enabled, True)
+        GLib.idle_add(self.get_application().lookup_action('copy_all').set_enabled, True)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
 
     def on_upload(self, file:Gio.File):
@@ -209,6 +150,8 @@ class PigmentWindow(Adw.ApplicationWindow):
         self.get_application().create_action('upload', lambda *_: self.upload_requested(), ['<primary>U'])
         self.get_application().create_action('generate', lambda *_: threading.Thread(target=self.generate_requested).start(), ['<primary>R'])
         self.get_application().create_action('preferences', lambda *_: self.preferences_dialog.present(self), ['<primary>comma'])
+        self.get_application().create_action('copy_all', lambda *_: self.copy_all_requested())
+        self.get_application().lookup_action('copy_all').set_enabled(False)
 
         for widget in (self.picture_overlay.get_parent(), self.main_stack.get_child_by_name('welcome')):
             drop_target = Gtk.DropTarget.new(
