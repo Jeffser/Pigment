@@ -131,7 +131,7 @@ class PigmentWindow(Adw.ApplicationWindow):
             try:
                 self.on_upload(dialog.open_finish(result))
             except GLib.GError as e:
-                print(e)
+                pass
 
         filter_list = Gio.ListStore.new(Gtk.FileFilter)
         filter_list.append(self.get_image_filter())
