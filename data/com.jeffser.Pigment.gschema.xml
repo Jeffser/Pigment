@@ -2,10 +2,10 @@
 <schemalist gettext-domain="pigment">
 	<schema id="com.jeffser.Pigment" path="/com/jeffser/Pigment/">
     <key name="default-width" type="i">
-      <default>1300</default>
+      <default>550</default>
     </key>
     <key name="default-height" type="i">
-			<default>800</default>
+			<default>450</default>
 		</key>
 		<key name="maximized" type="b">
 			<default>false</default>
