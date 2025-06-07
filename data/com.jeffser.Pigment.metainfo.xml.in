@@ -67,6 +67,14 @@
   </screenshots>
 
   <releases>
+    <release version="0.2.0" date="2025-06-06">
+      <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.2.0</url>
+      <description>
+        <p>New icon</p>
+        <p>Removed unnecessary permissions to access network</p>
+        <p>Added translation to spanish</p>
+      </description>
+    </release>
     <release version="0.1.0" date="2025-06-06">
       <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.1.0</url>
       <description>
