@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-06 21:06-0600\n"
+"POT-Creation-Date: 2025-06-07 14:22-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Pigment"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:8
-msgid "Extract color palettes from your images"
+msgid "Get color palettes from images"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:10
@@ -32,47 +32,55 @@ msgid ""
 "colors."
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:53
-msgid "Example image showing fishes"
+#: data/com.jeffser.Pigment.metainfo.xml.in:52
+msgid "Example image showing fish"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:57
+#: data/com.jeffser.Pigment.metainfo.xml.in:56
 msgid "Example image showing Niko from Oneshot"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:61
+#: data/com.jeffser.Pigment.metainfo.xml.in:60
 msgid "Example image showing an alpaca"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:65
+#: data/com.jeffser.Pigment.metainfo.xml.in:64
 msgid "Example image showing a Japanese painting"
 msgstr ""
 
+#: data/com.jeffser.Pigment.metainfo.xml.in:72
+msgid "Added option to capitalize colors"
+msgstr ""
+
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Better metadata for distribution"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:79
 msgid "New icon"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:74
+#: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Removed unnecessary permissions to access network"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:75
+#: data/com.jeffser.Pigment.metainfo.xml.in:81
 msgid "Added translation to spanish"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:81
+#: data/com.jeffser.Pigment.metainfo.xml.in:87
 msgid "Initial Release"
 msgstr ""
 
-#: src/window.py:66 src/window.py:131
+#: src/window.py:67 src/window.py:136
 msgid "Copy Color"
 msgstr ""
 
-#: src/window.py:104
+#: src/window.py:106
 msgid "Image files"
 msgstr ""
 
-#: src/window.py:113
+#: src/window.py:115
 msgid "Color copied to clipboard."
 msgstr ""
 
@@ -109,17 +117,21 @@ msgid "Autogenerate Palette After Uploading Image"
 msgstr ""
 
 #: src/window.ui:228
+msgid "Display Colors in Uppercase"
+msgstr ""
+
+#: src/window.ui:233
 msgid "Default Color Format"
 msgstr ""
 
-#: src/window.ui:250
+#: src/window.ui:255
 msgid "Preferences"
 msgstr ""
 
-#: src/window.ui:254
+#: src/window.ui:259
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/window.ui:258
+#: src/window.ui:263
 msgid "About Pigment"
 msgstr ""
