@@ -44,6 +44,13 @@ Pigment is distributed with Flatpak, make sure your distribution supports Flatpa
 3. Install
 4. Enjoy
 
+## Translators
+
+Language               | Contributors
+:----------------------|:-----------
+🇪🇸 Spanish             | [Jeffry Samuel](https://github.com/jeffser)
+🇮🇳 Telugu              | [Aryan Karamtoth](https://github.com/SpaciousCoder78)
+
 ## Thanks
 
 Made using [ColorThief](https://github.com/fengsp/color-thief-py).

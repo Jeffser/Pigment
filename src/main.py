@@ -26,6 +26,10 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Adw
 from .window import PigmentWindow
 
+TRANSLATORS = [
+    'Jeffry Samuel (Spanish) https://github.com/jeffser',
+    'Aryan Karamtoth (Telugu) https://github.com/SpaciousCoder78'
+]
 
 class PigmentApplication(Adw.Application):
     __gtype_name__ = 'PigmentApplication'
@@ -50,8 +54,8 @@ class PigmentApplication(Adw.Application):
                                 developer_name='Jeffry Samuel Eduarte Rojas',
                                 version=self.version,
                                 developers=['Jeffry Samuel Eduarte Rojas https://github.com/Jeffser'],
-                                copyright='© 2025 Jeffry Samuel Eduarte Rojas\nBased on Color Thief')
-        about.set_translator_credits('Jeffry Samuel (Spanish) https://github.com/jeffser')
+                                copyright='© 2025 Jeffry Samuel Eduarte Rojas\nBased on Color Thief',
+                                translator_credits='\n'.join(TRANSLATORS))
         about.present(self.props.active_window)
 
     def create_action(self, name, callback, shortcuts=None):
