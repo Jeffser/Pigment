@@ -1,0 +1,141 @@
+# Telugu (te) Translation for Pigment.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Aryan Karamtoth <aryankmmiv@outlook.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-07 14:22-0600\n"
+"PO-Revision-Date: 2025-06-08 07:37+0530\n"
+"Last-Translator: Aryan Karamtoth <aryankmmiv@outlook.com>\n"
+"Language-Team:  GNOME Telugu Translation Team <indlinux-telugu@lists."
+"sourceforge.net>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 46.0\n"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:7 src/window.ui:6
+msgid "Pigment"
+msgstr "పిగ్మెంట్"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:8
+msgid "Get color palettes from images"
+msgstr "చిత్రాల నుండి రంగుల పాలెట్‌లను పొందండి"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:10
+msgid ""
+"Pigment allows you to extract a palette of colors from your images offline. "
+"You can select the speed and accuracy by modifying the number and quality of "
+"colors."
+msgstr ""
+"పిగ్మెంట్ మీ చిత్రాల నుండి ఆఫ్‌లైన్‌లో రంగుల పాలెట్‌ను సంగ్రహించడానికి మిమ్మల్ని అనుమతిస్తుంది. రంగుల సంఖ్య "
+"మరియు నాణ్యతను సవరించడం ద్వారా మీరు వేగం మరియు ఖచ్చితత్వాన్ని ఎంచుకోవచ్చు."
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:52
+msgid "Example image showing fish"
+msgstr "చేపలను చూపుతున్న ఉదాహరణ చిత్రం"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:56
+msgid "Example image showing Niko from Oneshot"
+msgstr "వన్‌షాట్ నుండి నికోను చూపించే ఉదాహరణ చిత్రం"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:60
+msgid "Example image showing an alpaca"
+msgstr "అల్పాకాను చూపించే ఉదాహరణ చిత్రం"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:64
+msgid "Example image showing a Japanese painting"
+msgstr "జపనీస్ పెయింటింగ్‌ను చూపించే ఉదాహరణ చిత్రం"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:72
+msgid "Added option to capitalize colors"
+msgstr "రంగులను పెద్ద అక్షరాలలో చేర్చడానికి ఎంపిక జోడించబడింది"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Better metadata for distribution"
+msgstr "పంపిణీ కోసం మెరుగైన మెటాడేటా"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:79
+msgid "New icon"
+msgstr "కొత్త చిహ్నం"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:80
+msgid "Removed unnecessary permissions to access network"
+msgstr "నెట్‌వర్క్‌ను యాక్సెస్ చేయడానికి అనవసరమైన అనుమతులను తొలగించారు."
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:81
+msgid "Added translation to spanish"
+msgstr "స్పానిష్‌కి అనువాదం జోడించబడింది"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:87
+msgid "Initial Release"
+msgstr "ప్రారంభ విడుదల"
+
+#: src/window.py:67 src/window.py:136
+msgid "Copy Color"
+msgstr "రంగును కాపీ చేయండి"
+
+#: src/window.py:106
+msgid "Image files"
+msgstr "చిత్ర ఫైళ్లు"
+
+#: src/window.py:115
+msgid "Color copied to clipboard."
+msgstr "రంగు క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది."
+
+#: src/window.ui:23
+msgid "Main Menu"
+msgstr "ప్రధాన మెనూ"
+
+#: src/window.ui:39
+msgid "Select an image to get started!"
+msgstr "ప్రారంభించడానికి ఒక చిత్రాన్ని ఎంచుకోండి!"
+
+#: src/window.ui:47
+msgid "Upload Image"
+msgstr "చిత్రాన్ని అప్‌లోడ్ చేయండి"
+
+#: src/window.ui:126
+msgid "Quality"
+msgstr "నాణ్యత"
+
+#: src/window.ui:139
+msgid "Number of Colors"
+msgstr "రంగుల సంఖ్య"
+
+#: src/window.ui:152
+msgid "Generate Palette"
+msgstr "పాలెట్‌ని రూపొందించండి"
+
+#: src/window.ui:175
+msgid "Start by generating a palette"
+msgstr "ప్యాలెట్‌ను రూపొందించడం ద్వారా ప్రారంభించండి"
+
+#: src/window.ui:223
+msgid "Autogenerate Palette After Uploading Image"
+msgstr "చిత్రాన్ని అప్‌లోడ్ చేసిన తర్వాత ప్యాలెట్‌ను ఆటోజెనరేట్ చేయండి"
+
+#: src/window.ui:228
+msgid "Display Colors in Uppercase"
+msgstr "రంగులను పెద్ద అక్షరాలలో ప్రదర్శించు"
+
+#: src/window.ui:233
+msgid "Default Color Format"
+msgstr "డిఫాల్ట్ రంగు ఫార్మాట్"
+
+#: src/window.ui:255
+msgid "Preferences"
+msgstr "ప్రాధాన్యతలు"
+
+#: src/window.ui:259
+msgid "Keyboard Shortcuts"
+msgstr "కీబోర్డ్ సత్వరమార్గాలు"
+
+#: src/window.ui:263
+msgid "About Pigment"
+msgstr "పిగ్మెంట్ గురించి"
