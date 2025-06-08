@@ -1,6 +1,6 @@
-# Telugu (te) Translation for Pigment.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Telugu (te) translations for Pigment package.
+# Copyright (C) 2025 Jeffry Samuel Eduarte Rojas
+# This file is distributed under the same license as the Pigment package.
 # Aryan Karamtoth <aryankmmiv@outlook.com>, 2025.
 #
 msgid ""
