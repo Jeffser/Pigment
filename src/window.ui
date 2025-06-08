@@ -266,6 +266,10 @@
         <attribute name="action">app.preferences</attribute>
       </item>
       <item>
+        <attribute name="label" translatable="yes">Take Screenshot</attribute>
+        <attribute name="action">app.screenshot</attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>
       </item>

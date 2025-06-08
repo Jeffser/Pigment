@@ -21,6 +21,7 @@ from gi.repository import Gtk, Adw, Gio, Gdk, GLib
 
 import os, threading
 from colorthief import ColorThief
+from pydbus import SessionBus, Variant
 
 from .widgets import Color
 
@@ -52,6 +53,10 @@ class PigmentWindow(Adw.ApplicationWindow):
         'image/bmp',
         'image/tiff'
     )
+
+    def action_toggle(self, actions:tuple, state:bool):
+        for action in actions:
+            self.get_application().lookup_action(action).set_enabled(state)
 
     def get_image_filter(self) -> Gtk.FileFilter:
         file_filter = Gtk.FileFilter()
@@ -92,9 +97,7 @@ class PigmentWindow(Adw.ApplicationWindow):
         GLib.idle_add(self.palette_container.set_child, wbox)
 
     def generate_requested(self):
-        GLib.idle_add(self.get_application().lookup_action('upload').set_enabled, False)
-        GLib.idle_add(self.get_application().lookup_action('generate').set_enabled, False)
-        GLib.idle_add(self.get_application().lookup_action('copy_all').set_enabled, False)
+        GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), False)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'loading')
         GLib.idle_add(self.palette_container.set_child, None)
         picture = self.picture_overlay.get_child().get_file()
@@ -109,9 +112,7 @@ class PigmentWindow(Adw.ApplicationWindow):
                 )
                 if palette and len(palette) > 0:
                     self.on_generate(palette[:number])
-        GLib.idle_add(self.get_application().lookup_action('upload').set_enabled, True)
-        GLib.idle_add(self.get_application().lookup_action('generate').set_enabled, True)
-        GLib.idle_add(self.get_application().lookup_action('copy_all').set_enabled, True)
+        GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), True)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
 
     def on_upload(self, file:Gio.File):
@@ -144,12 +145,33 @@ class PigmentWindow(Adw.ApplicationWindow):
             lambda dialog, result: open_finish_wrapper(dialog, result) if result else None
         )
 
+    def screenshot_requested(self):
+        bus = SessionBus()
+        portal = bus.get("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop")
+        subscription = None
+
+        def on_response(sender, obj, iface, signal, *params):
+            response = params[0]
+            if response[0] == 0:
+                uri = response[1].get("uri")
+                self.on_upload(Gio.File.new_for_uri(uri))
+            if subscription:
+                subscription.disconnect()
+
+        subscription = bus.subscribe(
+            iface="org.freedesktop.portal.Request",
+            signal="Response",
+            signal_fired=on_response
+        )
+
+        portal.Screenshot("", {"interactive": Variant('b', True)})
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.get_application().create_action('upload', lambda *_: self.upload_requested(), ['<primary>U'])
         self.get_application().create_action('generate', lambda *_: threading.Thread(target=self.generate_requested).start(), ['<primary>R'])
         self.get_application().create_action('preferences', lambda *_: self.preferences_dialog.present(self), ['<primary>comma'])
+        self.get_application().create_action('screenshot', lambda *_: self.screenshot_requested(), ['<primary>S'])
         self.get_application().create_action('copy_all', lambda *_: self.copy_all_requested())
         self.get_application().lookup_action('copy_all').set_enabled(False)
 
