@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-07 23:39-0600\n"
-"PO-Revision-Date: 2025-06-08 07:37+0530\n"
+"PO-Revision-Date: 2025-06-08 12:58+0530\n"
 "Last-Translator: Aryan Karamtoth <aryankmmiv@outlook.com>\n"
-"Language-Team:  GNOME Telugu Translation Team <indlinux-"
-"telugu@lists.sourceforge.net>\n"
+"Language-Team:  GNOME Telugu Translation Team <indlinux-telugu@lists."
+"sourceforge.net>\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,15 +54,15 @@ msgstr "జపనీస్ పెయింటింగ్‌ను చూపి�
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
 msgid "Added Telugu translation"
-msgstr ""
+msgstr "తెలుగు అనువాదం చేర్చబడింది"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
 msgid "Added option to take screenshots"
-msgstr ""
+msgstr "స్క్రీన్‌షాట్‌లను తీయడానికి ఎంపిక జోడించబడింది"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
 msgid "Added option to copy the whole palette"
-msgstr ""
+msgstr "మొత్తం పాలెట్‌ను కాపీ చేయడానికి ఎంపిక జోడించబడింది"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added option to capitalize colors"
@@ -94,7 +94,7 @@ msgstr "చిత్ర ఫైళ్లు"
 
 #: src/window.py:72
 msgid "Palette copied to clipboard."
-msgstr ""
+msgstr "ప్యాలెట్ క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది."
 
 #: src/window.py:72
 msgid "Color copied to clipboard."
@@ -102,7 +102,7 @@ msgstr "రంగు క్లిప్‌బోర్డ్‌కు కాప�
 
 #: src/window.ui:23
 msgid "Copy Palette"
-msgstr ""
+msgstr "పాలెట్‌ను కాపీ చేయండి"
 
 #: src/window.ui:33
 msgid "Main Menu"
@@ -150,7 +150,7 @@ msgstr "ప్రాధాన్యతలు"
 
 #: src/window.ui:269
 msgid "Take Screenshot"
-msgstr ""
+msgstr "స్క్రీన్‌షాట్ తీసుకోండి"
 
 #: src/window.ui:273
 msgid "Keyboard Shortcuts"
