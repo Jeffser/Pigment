@@ -53,15 +53,15 @@ msgstr "Imagen de ejemplo que muestra una pintura japonesa"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
 msgid "Added Telugu translation"
-msgstr ""
+msgstr "Se agregó traducción a Telugu"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
 msgid "Added option to take screenshots"
-msgstr ""
+msgstr "Se agregó la opción de tomar screenshots"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
 msgid "Added option to copy the whole palette"
-msgstr ""
+msgstr "Se agregó la opción de copiar toda la paleta"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added option to capitalize colors"
@@ -93,7 +93,7 @@ msgstr "Archivos de imagen"
 
 #: src/window.py:72
 msgid "Palette copied to clipboard."
-msgstr ""
+msgstr "Paleta copiada al portapapeles."
 
 #: src/window.py:72
 msgid "Color copied to clipboard."
@@ -101,7 +101,7 @@ msgstr "Color copiado al portapapeles."
 
 #: src/window.ui:23
 msgid "Copy Palette"
-msgstr ""
+msgstr "Copiar Paleta"
 
 #: src/window.ui:33
 msgid "Main Menu"
@@ -149,7 +149,7 @@ msgstr "Preferencias"
 
 #: src/window.ui:269
 msgid "Take Screenshot"
-msgstr ""
+msgstr "Tomar Screenshot"
 
 #: src/window.ui:273
 msgid "Keyboard Shortcuts"
