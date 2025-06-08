@@ -66,6 +66,14 @@
   </screenshots>
 
   <releases>
+    <release version="0.4.0" date="2025-06-08">
+      <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.4.0</url>
+      <description>
+        <p>Added Telugu translation</p>
+        <p>Added option to take screenshots</p>
+        <p>Added option to copy the whole palette</p>
+      </description>
+    </release>
     <release version="0.3.0" date="2025-06-07">
       <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.3.0</url>
       <description>
