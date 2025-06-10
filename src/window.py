@@ -100,20 +100,42 @@ class PigmentWindow(Adw.ApplicationWindow):
         GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), False)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'loading')
         GLib.idle_add(self.palette_container.set_child, None)
+
         picture = self.picture_overlay.get_child().get_file()
+
         if picture and picture.get_path():
             quality = int(self.preference_quality.get_value())
             number = int(self.preference_number.get_value())
             ct_picture = ColorThief(picture.get_path())
+
             if ct_picture:
-                palette = ct_picture.get_palette(
-                    color_count=1+number,
-                    quality=11-quality
-                )
+                try:
+                    palette = ct_picture.get_palette(
+                        color_count=1+number,
+                        quality=11-quality
+                    )
+                    print(palette)
+                except Exception as e:
+                    GLib.idle_add(
+                        self.palette_stack.set_visible_child_name,
+                        'no-content'
+                    )
+                    
+                    GLib.idle_add(self.toast_overlay.add_toast,
+                        Adw.Toast(
+                            title=_('Error generating palette: {}').format(str(e)),
+                            timeout=3
+                        )
+                    )
+
+                    palette = [(255, 255, 255)]
+
                 if palette and len(palette) > 0:
                     self.on_generate(palette[:number])
+
         GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), True)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
+
         if not self.settings.get_boolean('skip-tutorial'):
             GLib.idle_add(self.toast_overlay.add_toast,
                 Adw.Toast(
@@ -121,6 +143,7 @@ class PigmentWindow(Adw.ApplicationWindow):
                     timeout=3
                 )
             )
+
             self.settings.set_boolean('skip-tutorial', True)
 
     def on_upload(self, file:Gio.File):
