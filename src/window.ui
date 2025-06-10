@@ -240,7 +240,7 @@
               </child>
               <child>
                 <object class="AdwSwitchRow" id="omit_doubled_colors_switch">
-                  <property name="title" translatable="yes">Omit doubled colors in palette</property>
+                  <property name="title" translatable="yes">Omit Doubled Colors in Palette</property>
                 </object>
               </child>
               <child>
