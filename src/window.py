@@ -235,4 +235,3 @@ class PigmentWindow(Adw.ApplicationWindow):
             'value',
             Gio.SettingsBindFlags.DEFAULT
         )
-
