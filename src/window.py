@@ -43,6 +43,7 @@ class PigmentWindow(Adw.ApplicationWindow):
     preferences_dialog = Gtk.Template.Child()
     autogenerate_switch = Gtk.Template.Child()
     uppercase_switch = Gtk.Template.Child()
+    omit_doubled_colors_switch = Gtk.Template.Child()
     default_format_switch = Gtk.Template.Child()
 
     image_mimetypes = (
@@ -53,6 +54,13 @@ class PigmentWindow(Adw.ApplicationWindow):
         'image/bmp',
         'image/tiff'
     )
+
+    def get_unpacked_settings_value(self, setting_name: str):
+        """
+        Helper function to get the value of a setting.
+        """
+
+        return self.settings.get_value(setting_name).unpack()
 
     def action_toggle(self, actions:tuple, state:bool):
         for action in actions:
@@ -80,20 +88,26 @@ class PigmentWindow(Adw.ApplicationWindow):
             colors.append(widget.get_name())
         self.copy_requested('\n'.join(colors))
 
-    def on_generate(self, palette:list):
+    def on_generate(self, palette: list):
         wbox = Adw.WrapBox(
             child_spacing=10,
             line_spacing=10,
             justify=1,
             justify_last_line=1
         )
+
+        # Omit any doubled colors if the setting is enabled
+        if self.get_unpacked_settings_value('omit-doubled-colors'):
+            palette = list(set(palette))
+
         for c in palette:
             color = Color(
                 rgb=c,
-                uppercase=self.settings.get_value('format-uppercase').unpack(),
-                default_index=self.settings.get_value('default-format').unpack()
+                uppercase=self.get_unpacked_settings_value('format-uppercase'),
+                default_index=self.get_unpacked_settings_value('default-format')
             )
             GLib.idle_add(wbox.append, color.button)
+
         GLib.idle_add(self.palette_container.set_child, wbox)
 
     def generate_requested(self):
@@ -152,7 +166,7 @@ class PigmentWindow(Adw.ApplicationWindow):
             if mimetype in self.image_mimetypes:
                 self.picture_overlay.get_child().set_file(file)
                 self.main_stack.set_visible_child_name('content')
-                if bool(self.settings.get_value('autogenerate').unpack()):
+                if bool(self.get_unpacked_settings_value('autogenerate')):
                     threading.Thread(target=self.generate_requested).start()
                 else:
                     self.palette_stack.set_visible_child_name('no-content')
@@ -239,6 +253,13 @@ class PigmentWindow(Adw.ApplicationWindow):
         )
 
         self.settings.bind(
+            'omit-doubled-colors',
+            self.omit_doubled_colors_switch,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        )
+
+        self.settings.bind(
             'default-format',
             self.default_format_switch,
             'selected',
@@ -258,4 +279,3 @@ class PigmentWindow(Adw.ApplicationWindow):
             'value',
             Gio.SettingsBindFlags.DEFAULT
         )
-
