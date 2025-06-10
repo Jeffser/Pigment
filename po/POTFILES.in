@@ -3,3 +3,4 @@ data/com.jeffser.Pigment.gschema.xml
 src/main.py
 src/window.py
 src/window.ui
+src/widgets.py

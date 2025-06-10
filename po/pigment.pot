@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-07 23:39-0600\n"
+"POT-Creation-Date: 2025-06-09 18:54-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,4 +154,8 @@ msgstr ""
 
 #: src/window.ui:277
 msgid "About Pigment"
+msgstr ""
+
+#: src/widgets.py:91 src/widgets.py:117
+msgid "Copy Color"
 msgstr ""
