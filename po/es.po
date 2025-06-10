@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-09 18:54-0600\n"
+"POT-Creation-Date: 2025-06-09 19:10-0600\n"
 "PO-Revision-Date: 2025-06-06 20:44-0600\n"
 "Last-Translator: Jeffry Samuel Eduarte Rojas <jeffrysamuer@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
@@ -98,6 +98,10 @@ msgstr "Paleta copiada al portapapeles."
 #: src/window.py:72
 msgid "Color copied to clipboard."
 msgstr "Color copiado al portapapeles."
+
+#: src/window.py:120
+msgid "Click the image or drop a file into it to generate another palette!"
+msgstr ""
 
 #: src/window.ui:23
 msgid "Copy Palette"
