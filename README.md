@@ -13,19 +13,20 @@
 > [!WARNING]
 > AI generated issues and PRs will be denied, repeated offense will result in a ban from the repository.
 
-- [Initial Annoucement in Alpaca](https://github.com/Jeffser/Alpaca/discussions/793)
+<p align="center">
+    &#128073; <a href="https://github.com/Jeffser/Alpaca/discussions/793"><b>Initial Annoucement in the Alpaca project</b></a>
+</p>
 
 ## Screenies
 
-<img src="https://jeffser.com/images/pigment/screenie1.png">
-
-<img src="https://jeffser.com/images/pigment/screenie2.png">
-
-<img src="https://jeffser.com/images/pigment/screenie3.png">
-
-<img src="https://jeffser.com/images/pigment/screenie4.png">
+| ![Screenie 1](https://jeffser.com/images/pigment/screenie1.png) | ![Screenie 2](https://jeffser.com/images/pigment/screenie2.png) |
+|:---------------------------------------------------------------:|:---------------------------------------------------------------:|
+| ![Screenie 3](https://jeffser.com/images/pigment/screenie3.png) | ![Screenie 4](https://jeffser.com/images/pigment/screenie4.png) |
 
 ## Installation
+
+> [!TIP]
+> You may need to [install Flatpak and add the Flathub repository](https://flathub.org/setup) if you haven't already.
 
 ### Flathub
 
@@ -37,12 +38,12 @@ flatpak install com.jeffser.Pigment
 
 ### Package
 
-Pigment is distributed with Flatpak, make sure your distribution supports Flatpak before installing Pigment.
+Pigment is distributed with Flatpak - make sure your distribution supports Flatpak before installing Pigment!
 
-1. Download the latest Flatpak package from the [releases page](https://github.com/Jeffser/Pigment/releases).
+1. Download the latest Flatpak package from the [releases page](https://github.com/Jeffser/Pigment/releases)
 2. Open it
-3. Install
-4. Enjoy
+3. Install the application
+4. Enjoy!
 
 ## Translators
 
