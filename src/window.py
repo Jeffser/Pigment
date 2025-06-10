@@ -114,6 +114,14 @@ class PigmentWindow(Adw.ApplicationWindow):
                     self.on_generate(palette[:number])
         GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), True)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
+        if not self.settings.get_boolean('skip-tutorial'):
+            GLib.idle_add(self.toast_overlay.add_toast,
+                Adw.Toast(
+                    title=_('Click the image or drop a file into it to generate another palette!'),
+                    timeout=3
+                )
+            )
+            self.settings.set_boolean('skip-tutorial', True)
 
     def on_upload(self, file:Gio.File):
         if file.get_path():

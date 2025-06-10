@@ -25,5 +25,8 @@
 	  <key name="color-number" type="i">
 	    <default>10</default>
 	  </key>
+	  <key name="skip-tutorial" type="b">
+	    <default>false</default>
+	  </key>
   </schema>
 </schemalist>
