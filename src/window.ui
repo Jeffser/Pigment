@@ -239,8 +239,8 @@
                 </object>
               </child>
               <child>
-                <object class="AdwSwitchRow" id="omit_doubled_colors_switch">
-                  <property name="title" translatable="yes">Omit Doubled Colors in Palette</property>
+                <object class="AdwSwitchRow" id="skip_duplicated_colors_switch">
+                  <property name="title" translatable="yes">Skip Duplicate Colors in the Palette</property>
                 </object>
               </child>
               <child>

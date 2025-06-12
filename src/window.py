@@ -43,7 +43,7 @@ class PigmentWindow(Adw.ApplicationWindow):
     preferences_dialog = Gtk.Template.Child()
     autogenerate_switch = Gtk.Template.Child()
     uppercase_switch = Gtk.Template.Child()
-    omit_doubled_colors_switch = Gtk.Template.Child()
+    skip_duplicated_colors_switch = Gtk.Template.Child()
     default_format_switch = Gtk.Template.Child()
 
     image_mimetypes = (
@@ -97,7 +97,7 @@ class PigmentWindow(Adw.ApplicationWindow):
         )
 
         # Omit any doubled colors if the setting is enabled
-        if self.get_unpacked_settings_value('omit-doubled-colors'):
+        if self.get_unpacked_settings_value('skip-duplicated-colors'):
             palette = list(set(palette))
 
         for c in palette:
@@ -128,7 +128,7 @@ class PigmentWindow(Adw.ApplicationWindow):
                         color_count=1+number,
                         quality=11-quality
                     )
-                    print(palette)
+
                 except Exception as e:
                     GLib.idle_add(
                         self.palette_stack.set_visible_child_name,
@@ -252,8 +252,8 @@ class PigmentWindow(Adw.ApplicationWindow):
         )
 
         self.settings.bind(
-            'omit-doubled-colors',
-            self.omit_doubled_colors_switch,
+            'skip-duplicated-colors',
+            self.skip_duplicated_colors_switch,
             'active',
             Gio.SettingsBindFlags.DEFAULT
         )

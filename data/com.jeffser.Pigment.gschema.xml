@@ -16,7 +16,7 @@
 	  <key name="format-uppercase" type="b">
 	    <default>true</default>
 	  </key>
-	  <key name="omit-doubled-colors" type="b">
+	  <key name="skip-duplicated-colors" type="b">
 	    <default>false</default>
 	  </key>
 	  <key name="default-format" type="i">
