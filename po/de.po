@@ -1,29 +1,30 @@
 # German translations for Pigment package.
 # Copyright (C) 2025 Jeffry Samuel Eduarte Rojas
 # This file is distributed under the same license as the Pigment package.
-# YOUR NAME <YOUR EMAIL>, 2025.
+# Magnus Schlinsog <magnusschlinsog@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-09 19:10-0600\n"
-"PO-Revision-Date: 2025-06-09 18:55-0600\n"
-"Last-Translator: Jeffry Samuel Eduarte Rojas <tentri@kitsune>\n"
-"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2025-06-10 11:54+0200\n"
+"Last-Translator: Magnus Schlinsog <magnusschlinsog@gmail.com>\n"
+"Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:7 src/window.ui:6
 msgid "Pigment"
-msgstr ""
+msgstr "Pigment"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:8
 msgid "Get color palettes from images"
-msgstr ""
+msgstr "Farbpaletten aus Bildern extrahieren"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:10
 msgid ""
@@ -31,135 +32,140 @@ msgid ""
 "You can select the speed and accuracy by modifying the number and quality of "
 "colors."
 msgstr ""
+"Pigment erlaubt es dir, offline eine Farbpalette aus Bildern zu extrahieren. "
+"Du kannst Geschwindigkeit und Genauigkeit durch das Anpassen der Menge und "
+"Qualität der Farben festlegen."
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:52
 msgid "Example image showing fish"
-msgstr ""
+msgstr "Beispielbild eines Fisches"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:56
 msgid "Example image showing Niko from Oneshot"
-msgstr ""
+msgstr "Beispielbild, das Niko aus Oneshot darstellt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:60
 msgid "Example image showing an alpaca"
-msgstr ""
+msgstr "Beispielbild eines Alpakas"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:64
 msgid "Example image showing a Japanese painting"
-msgstr ""
+msgstr "Beispielbild eines japanischen Gemäldes"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
 msgid "Added Telugu translation"
-msgstr ""
+msgstr "Telugu-Übersetzung hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
 msgid "Added option to take screenshots"
-msgstr ""
+msgstr "Option zur Erstellung von Screenshots hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
 msgid "Added option to copy the whole palette"
-msgstr ""
+msgstr "Option zum Kopieren der gesamten Farbpalette hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added option to capitalize colors"
-msgstr ""
+msgstr "Option zur Großschreibung der Farben hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:81
 msgid "Better metadata for distribution"
-msgstr ""
+msgstr "Bessere Metadaten zur Distribution der App"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:87
 msgid "New icon"
-msgstr ""
+msgstr "Neues Icon"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:88
 msgid "Removed unnecessary permissions to access network"
-msgstr ""
+msgstr "Unnötige Netzwerkberechtigung entfernt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:89
 msgid "Added translation to spanish"
-msgstr ""
+msgstr "Spanische Übersetzung hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:95
 msgid "Initial Release"
-msgstr ""
+msgstr "Erster Release"
 
 #: src/window.py:63
 msgid "Image files"
-msgstr ""
+msgstr "Bilddateien"
 
 #: src/window.py:72
 msgid "Palette copied to clipboard."
-msgstr ""
+msgstr "Palette in die Zwischenablage kopiert."
 
 #: src/window.py:72
 msgid "Color copied to clipboard."
-msgstr ""
+msgstr "Farbe in die Zwischenablage kopiert."
 
 #: src/window.py:120
 msgid "Click the image or drop a file into it to generate another palette!"
 msgstr ""
+"Klicke auf das Bild oder nutze Drag-and-Drop, um eine andere Palette zu "
+"generieren!"
 
 #: src/window.ui:23
 msgid "Copy Palette"
-msgstr ""
+msgstr "Palette kopieren"
 
 #: src/window.ui:33
 msgid "Main Menu"
-msgstr ""
+msgstr "Hauptmenü"
 
 #: src/window.ui:49
 msgid "Select an image to get started!"
-msgstr ""
+msgstr "Wähle ein Bild, um loszulegen!"
 
 #: src/window.ui:57
 msgid "Upload Image"
-msgstr ""
+msgstr "Bild hochladen"
 
 #: src/window.ui:136
 msgid "Quality"
-msgstr ""
+msgstr "Qualität"
 
 #: src/window.ui:149
 msgid "Number of Colors"
-msgstr ""
+msgstr "Menge an Farben"
 
 #: src/window.ui:162
 msgid "Generate Palette"
-msgstr ""
+msgstr "Palette generieren"
 
 #: src/window.ui:185
 msgid "Start by generating a palette"
-msgstr ""
+msgstr "Lege los, indem Du eine Palette generierst!"
 
 #: src/window.ui:233
 msgid "Autogenerate Palette After Uploading Image"
-msgstr ""
+msgstr "Automatisch nach dem Upload eine Palette generieren"
 
 #: src/window.ui:238
 msgid "Display Colors in Uppercase"
-msgstr ""
+msgstr "Farben in Großbuchstaben anzeigen"
 
 #: src/window.ui:243
 msgid "Default Color Format"
-msgstr ""
+msgstr "Standard-Farbformat"
 
 #: src/window.ui:265
 msgid "Preferences"
-msgstr ""
+msgstr "Einstellungen"
 
 #: src/window.ui:269
 msgid "Take Screenshot"
-msgstr ""
+msgstr "Screenshot machen"
 
 #: src/window.ui:273
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Tastenkürzel"
 
 #: src/window.ui:277
 msgid "About Pigment"
-msgstr ""
+msgstr "Über Pigment"
 
 #: src/widgets.py:91 src/widgets.py:117
 msgid "Copy Color"
-msgstr ""
+msgstr "Farbe kopieren"
