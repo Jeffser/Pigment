@@ -158,7 +158,6 @@ class PigmentWindow(Adw.ApplicationWindow):
                 self.main_stack.set_visible_child_name('content')
                 if self.settings.get_boolean('autogenerate'):
                     self.get_application().activate_action("generate", None)
-                    #threading.Thread(target=self.generate_requested).start()
                 else:
                     self.palette_stack.set_visible_child_name('no-content')
                     self.palette_container.set_child(None)

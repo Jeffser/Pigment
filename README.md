@@ -51,7 +51,7 @@ Language               | Contributors
 :----------------------|:-----------
 🇪🇸 Spanish             | [Jeffry Samuel](https://github.com/jeffser)
 🇮🇳 Telugu              | [Aryan Karamtoth](https://github.com/SpaciousCoder78)
-🇩🇪 German                | [Magnus Schlinsog](https://github.com/mags0ft)
+🇩🇪 German              | [Magnus Schlinsog](https://github.com/mags0ft)
 
 ## Thanks
 
