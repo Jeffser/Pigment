@@ -49,12 +49,12 @@
                     <property name="description" translatable="yes">Select an image to get started!</property>
                     <property name="child">
                       <object class="GtkButton">
-                        <property name="action-name">app.upload</property>
+                        <property name="action-name">app.select</property>
                         <property name="halign">3</property>
                         <property name="child">
                           <object class="AdwButtonContent">
                             <property name="icon-name">share-symbolic</property>
-                            <property name="label" translatable="yes">Upload Image</property>
+                            <property name="label" translatable="yes">Select Image</property>
                           </object>
                         </property>
                         <style>
@@ -98,7 +98,7 @@
                                     <property name="spacing">10</property>
                                     <child>
                                       <object class="GtkButton">
-                                        <property name="action-name">app.upload</property>
+                                        <property name="action-name">app.select</property>
                                         <style>
                                           <class name="p0"/>
                                           <class name="picture_button"/>
@@ -230,7 +230,7 @@
             <object class="AdwPreferencesGroup">
               <child>
                 <object class="AdwSwitchRow" id="autogenerate_switch">
-                  <property name="title" translatable="yes">Autogenerate Palette After Uploading Image</property>
+                  <property name="title" translatable="yes">Autogenerate Palette After Selecting Image</property>
                 </object>
               </child>
               <child>

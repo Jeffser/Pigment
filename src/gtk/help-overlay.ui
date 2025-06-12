@@ -23,8 +23,8 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="title" translatable="yes" context="shortcut window">Upload Image</property>
-                <property name="action-name">app.upload</property>
+                <property name="title" translatable="yes" context="shortcut window">Select Image</property>
+                <property name="action-name">app.select</property>
               </object>
             </child>
             <child>

@@ -111,7 +111,7 @@ class PigmentWindow(Adw.ApplicationWindow):
         GLib.idle_add(self.palette_container.set_child, wbox)
 
     def generate_requested(self):
-        GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), False)
+        GLib.idle_add(self.action_toggle, ('select', 'generate', 'copy_all', 'screenshot'), False)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'loading')
         GLib.idle_add(self.palette_container.set_child, None)
 
@@ -146,8 +146,12 @@ class PigmentWindow(Adw.ApplicationWindow):
 
                 if palette and len(palette) > 0:
                     self.on_generate(palette[:number])
+<<<<<<< HEAD
 
         GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), True)
+=======
+        GLib.idle_add(self.action_toggle, ('select', 'generate', 'copy_all', 'screenshot'), True)
+>>>>>>> f7321dd (Changed wording upload -> select)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
 
         if not self.settings.get_boolean('skip-tutorial'):
@@ -160,7 +164,7 @@ class PigmentWindow(Adw.ApplicationWindow):
 
             self.settings.set_boolean('skip-tutorial', True)
 
-    def on_upload(self, file:Gio.File):
+    def on_select(self, file:Gio.File):
         if file.get_path():
             mimetype = file.query_info('standard::content-type', Gio.FileQueryInfoFlags.NONE, None).get_content_type()
             if mimetype in self.image_mimetypes:
@@ -172,10 +176,10 @@ class PigmentWindow(Adw.ApplicationWindow):
                     self.palette_stack.set_visible_child_name('no-content')
                     self.palette_container.set_child(None)
 
-    def upload_requested(self):
+    def select_requested(self):
         def open_finish_wrapper(dialog, result):
             try:
-                self.on_upload(dialog.open_finish(result))
+                self.on_select(dialog.open_finish(result))
             except GLib.GError as e:
                 pass
 
@@ -199,7 +203,7 @@ class PigmentWindow(Adw.ApplicationWindow):
             response = params[0]
             if response[0] == 0:
                 uri = response[1].get("uri")
-                self.on_upload(Gio.File.new_for_uri(uri))
+                self.on_select(Gio.File.new_for_uri(uri))
             if subscription:
                 subscription.disconnect()
 
@@ -213,7 +217,7 @@ class PigmentWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.get_application().create_action('upload', lambda *_: self.upload_requested(), ['<primary>U'])
+        self.get_application().create_action('select', lambda *_: self.select_requested(), ['<primary>E'])
         self.get_application().create_action('generate', lambda *_: threading.Thread(target=self.generate_requested).start(), ['<primary>R'])
         self.get_application().create_action('preferences', lambda *_: self.preferences_dialog.present(self), ['<primary>comma'])
         self.get_application().create_action('screenshot', lambda *_: self.screenshot_requested(), ['<primary>S'])
@@ -225,7 +229,7 @@ class PigmentWindow(Adw.ApplicationWindow):
                 type=Gio.File,
                 actions=Gdk.DragAction.COPY
             )
-            drop_target.connect("drop", lambda target, file, x, y: self.on_upload(file))
+            drop_target.connect("drop", lambda target, file, x, y: self.on_select(file))
             widget.add_controller(drop_target)
 
 
