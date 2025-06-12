@@ -4,19 +4,22 @@ from gi.repository import Gtk, Adw
 
 import colorsys
 
-def raw_rgb_to_hex(raw_rgb:tuple, uppercase:bool):
+
+def raw_rgb_to_hex(raw_rgb: tuple, uppercase: bool):
     hex_result = "#{:02x}{:02x}{:02x}".format(*raw_rgb)
     if uppercase:
         hex_result = hex_result.upper()
     return hex_result
 
-def raw_rgb_to_rgb(raw_rgb:tuple, uppercase:bool):
+
+def raw_rgb_to_rgb(raw_rgb: tuple, uppercase: bool):
     rgb_result = f"rgb({', '.join(str(c) for c in raw_rgb)})"
     if uppercase:
         rgb_result = rgb_result.upper()
     return rgb_result
 
-def raw_rgb_to_hsl(raw_rgb:tuple, uppercase:bool):
+
+def raw_rgb_to_hsl(raw_rgb: tuple, uppercase: bool):
     h, l, s = colorsys.rgb_to_hls(*[c / 255.0 for c in raw_rgb])
     hsl_numbers = (round(h * 360, 2), round(s * 100, 2), round(l * 100, 2))
     hsl_result = f"hsl({', '.join(str(c) + ('%' if i > 0 else '') for i, c in enumerate(hsl_numbers))})"
@@ -24,7 +27,8 @@ def raw_rgb_to_hsl(raw_rgb:tuple, uppercase:bool):
         hsl_result = hsl_result.upper()
     return hsl_result
 
-def raw_rgb_to_hsv(raw_rgb:tuple, uppercase:bool):
+
+def raw_rgb_to_hsv(raw_rgb: tuple, uppercase: bool):
     h, s, v = colorsys.rgb_to_hsv(*[c / 255.0 for c in raw_rgb])
     hsv_numbers = (round(h * 360, 2), round(s * 100, 2), round(v * 100, 2))
     hsv_result = f"hsv({', '.join(str(c) + ('%' if i > 0 else '') for i, c in enumerate(hsv_numbers))})"
@@ -32,10 +36,11 @@ def raw_rgb_to_hsv(raw_rgb:tuple, uppercase:bool):
         hsv_result = hsv_result.upper()
     return hsv_result
 
+
 class ColorBox(Gtk.DrawingArea):
     __gtype_name__ = 'PigmentColorBox'
 
-    def __init__(self, rgb:tuple):
+    def __init__(self, rgb: tuple):
         super().__init__()
         self.rgb = rgb
         self.set_content_width(32)
@@ -48,6 +53,7 @@ class ColorBox(Gtk.DrawingArea):
         cr.set_source_rgb(*[c / 255.0 for c in self.rgb])
         cr.rectangle(0, 0, width, height)
         cr.fill()
+
 
 class ColorButtonContent(Gtk.Box):
     __gtype_name__ = 'PigmentButtonContent'
@@ -64,6 +70,7 @@ class ColorButtonContent(Gtk.Box):
                 label=color.default_value
             )
         )
+
 
 class ColorPopover(Gtk.Popover):
     __gtype_name__ = 'PigmentPopover'
@@ -97,9 +104,9 @@ class ColorPopover(Gtk.Popover):
         self.popdown()
         self.get_root().copy_requested(text)
 
-class Color:
 
-    def __init__(self, rgb:tuple, uppercase:bool, default_index:int):
+class Color:
+    def __init__(self, rgb: tuple, uppercase: bool, default_index: int):
         self.raw_rgb = rgb
 
         self.menu_options = [
@@ -124,4 +131,3 @@ class Color:
         self.button.set_popover(ColorPopover(self))
         self.button.connect('clicked', lambda button, text=self.default_value: button.get_root().copy_requested(text))
         self.button.get_child().get_parent().add_css_class('p0')
-

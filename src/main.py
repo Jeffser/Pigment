@@ -31,6 +31,15 @@ TRANSLATORS = [
     'Aryan Karamtoth (Telugu) https://github.com/SpaciousCoder78'
 ]
 
+COPYRIGHT = """© 2025 Jeffry Samuel Eduarte Rojas.
+
+Based on Color Thief (https://github.com/fengsp/color-thief-py)\
+"""
+
+DEVELOPERS = [
+    'Jeffry Samuel Eduarte Rojas https://github.com/Jeffser'
+]
+
 class PigmentApplication(Adw.Application):
     __gtype_name__ = 'PigmentApplication'
 
@@ -53,8 +62,8 @@ class PigmentApplication(Adw.Application):
                                 application_icon='com.jeffser.Pigment',
                                 developer_name='Jeffry Samuel Eduarte Rojas',
                                 version=self.version,
-                                developers=['Jeffry Samuel Eduarte Rojas https://github.com/Jeffser'],
-                                copyright='© 2025 Jeffry Samuel Eduarte Rojas\nBased on Color Thief',
+                                developers=DEVELOPERS,
+                                copyright=COPYRIGHT,
                                 translator_credits='\n'.join(TRANSLATORS))
         about.present(self.props.active_window)
 
