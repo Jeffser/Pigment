@@ -55,13 +55,6 @@ class PigmentWindow(Adw.ApplicationWindow):
         'image/tiff'
     )
 
-    def get_unpacked_settings_value(self, setting_name: str):
-        """
-        Helper function to get the value of a setting.
-        """
-
-        return self.settings.get_value(setting_name).unpack()
-
     def action_toggle(self, actions:tuple, state:bool):
         for action in actions:
             self.get_application().lookup_action(action).set_enabled(state)
@@ -88,7 +81,7 @@ class PigmentWindow(Adw.ApplicationWindow):
             colors.append(widget.get_name())
         self.copy_requested('\n'.join(colors))
 
-    def on_generate(self, palette: list):
+    def on_generate(self, palette:list):
         wbox = Adw.WrapBox(
             child_spacing=10,
             line_spacing=10,
@@ -96,19 +89,15 @@ class PigmentWindow(Adw.ApplicationWindow):
             justify_last_line=1
         )
 
-        # Omit any doubled colors if the setting is enabled
-        if self.get_unpacked_settings_value('skip-duplicated-colors'):
-            palette = list(set(palette))
+        GLib.idle_add(self.palette_container.set_child, wbox)
 
         for c in palette:
             color = Color(
                 rgb=c,
-                uppercase=self.get_unpacked_settings_value('format-uppercase'),
-                default_index=self.get_unpacked_settings_value('default-format')
+                uppercase=self.settings.get_boolean('format-uppercase'),
+                default_index=self.settings.get_int('default-format')
             )
             GLib.idle_add(wbox.append, color.button)
-
-        GLib.idle_add(self.palette_container.set_child, wbox)
 
     def generate_requested(self):
         GLib.idle_add(self.action_toggle, ('select', 'generate', 'copy_all', 'screenshot'), False)
@@ -145,6 +134,8 @@ class PigmentWindow(Adw.ApplicationWindow):
                     palette = [(255, 255, 255)]
 
                 if palette and len(palette) > 0:
+                    if self.settings.get_boolean('skip-duplicated-colors'):
+                        palette = list(set(palette))
                     self.on_generate(palette[:number])
         GLib.idle_add(self.action_toggle, ('select', 'generate', 'copy_all', 'screenshot'), True)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
@@ -165,8 +156,9 @@ class PigmentWindow(Adw.ApplicationWindow):
             if mimetype in self.image_mimetypes:
                 self.picture_overlay.get_child().set_file(file)
                 self.main_stack.set_visible_child_name('content')
-                if bool(self.get_unpacked_settings_value('autogenerate')):
-                    threading.Thread(target=self.generate_requested).start()
+                if self.settings.get_boolean('autogenerate'):
+                    self.get_application().activate_action("generate", None)
+                    #threading.Thread(target=self.generate_requested).start()
                 else:
                     self.palette_stack.set_visible_child_name('no-content')
                     self.palette_container.set_child(None)
