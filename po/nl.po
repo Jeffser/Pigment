@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-09 19:10-0600\n"
+"POT-Creation-Date: 2025-06-11 20:49-0600\n"
 "PO-Revision-Date: 2025-06-09 18:55-0600\n"
 "Last-Translator: YOUR NAME <YOUR EMAIL>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -49,54 +49,70 @@ msgid "Example image showing a Japanese painting"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
-msgid "Added Telugu translation"
+msgid "Added German translation"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
-msgid "Added option to take screenshots"
+msgid "Changed wording from 'Upload' to 'Select'"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
-msgid "Added option to copy the whole palette"
+msgid "Added option to skip duplicated colors"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
-msgid "Added option to capitalize colors"
+msgid "Added Telugu translation"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:81
-msgid "Better metadata for distribution"
+msgid "Added option to take screenshots"
 msgstr ""
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:87
-msgid "New icon"
+#: data/com.jeffser.Pigment.metainfo.xml.in:82
+msgid "Added option to copy the whole palette"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:88
-msgid "Removed unnecessary permissions to access network"
+msgid "Added option to capitalize colors"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:89
-msgid "Added translation to spanish"
+msgid "Better metadata for distribution"
 msgstr ""
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:95
+msgid "New icon"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:96
+msgid "Removed unnecessary permissions to access network"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:97
+msgid "Added translation to spanish"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:103
 msgid "Initial Release"
 msgstr ""
 
-#: src/window.py:63
+#: src/window.py:64
 msgid "Image files"
 msgstr ""
 
-#: src/window.py:72
+#: src/window.py:73
 msgid "Palette copied to clipboard."
 msgstr ""
 
-#: src/window.py:72
+#: src/window.py:73
 msgid "Color copied to clipboard."
 msgstr ""
 
-#: src/window.py:120
+#: src/window.py:129
+msgid "Error generating palette: {}"
+msgstr ""
+
+#: src/window.py:146
 msgid "Click the image or drop a file into it to generate another palette!"
 msgstr ""
 
@@ -113,7 +129,7 @@ msgid "Select an image to get started!"
 msgstr ""
 
 #: src/window.ui:57
-msgid "Upload Image"
+msgid "Select Image"
 msgstr ""
 
 #: src/window.ui:136
@@ -133,7 +149,7 @@ msgid "Start by generating a palette"
 msgstr ""
 
 #: src/window.ui:233
-msgid "Autogenerate Palette After Uploading Image"
+msgid "Autogenerate Palette After Selecting Image"
 msgstr ""
 
 #: src/window.ui:238
@@ -141,25 +157,29 @@ msgid "Display Colors in Uppercase"
 msgstr ""
 
 #: src/window.ui:243
+msgid "Skip Duplicate Colors in the Palette"
+msgstr ""
+
+#: src/window.ui:248
 msgid "Default Color Format"
 msgstr ""
 
-#: src/window.ui:265
+#: src/window.ui:270
 msgid "Preferences"
 msgstr ""
 
-#: src/window.ui:269
+#: src/window.ui:274
 msgid "Take Screenshot"
 msgstr ""
 
-#: src/window.ui:273
+#: src/window.ui:278
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/window.ui:277
+#: src/window.ui:282
 msgid "About Pigment"
 msgstr ""
 
-#: src/widgets.py:91 src/widgets.py:117
+#: src/widgets.py:98 src/widgets.py:124
 msgid "Copy Color"
 msgstr ""

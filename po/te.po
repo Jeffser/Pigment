@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-09 19:10-0600\n"
+"POT-Creation-Date: 2025-06-11 20:49-0600\n"
 "PO-Revision-Date: 2025-06-08 12:58+0530\n"
 "Last-Translator: Aryan Karamtoth <aryankmmiv@outlook.com>\n"
 "Language-Team:  GNOME Telugu Translation Team <indlinux-"
@@ -53,54 +53,70 @@ msgid "Example image showing a Japanese painting"
 msgstr "జపనీస్ పెయింటింగ్‌ను చూపించే ఉదాహరణ చిత్రం"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
+msgid "Added German translation"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Changed wording from 'Upload' to 'Select'"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:74
+msgid "Added option to skip duplicated colors"
+msgstr ""
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added Telugu translation"
 msgstr "తెలుగు అనువాదం చేర్చబడింది"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:73
+#: data/com.jeffser.Pigment.metainfo.xml.in:81
 msgid "Added option to take screenshots"
 msgstr "స్క్రీన్‌షాట్‌లను తీయడానికి ఎంపిక జోడించబడింది"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:74
+#: data/com.jeffser.Pigment.metainfo.xml.in:82
 msgid "Added option to copy the whole palette"
 msgstr "మొత్తం పాలెట్‌ను కాపీ చేయడానికి ఎంపిక జోడించబడింది"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:80
+#: data/com.jeffser.Pigment.metainfo.xml.in:88
 msgid "Added option to capitalize colors"
 msgstr "రంగులను పెద్ద అక్షరాలలో చేర్చడానికి ఎంపిక జోడించబడింది"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:81
+#: data/com.jeffser.Pigment.metainfo.xml.in:89
 msgid "Better metadata for distribution"
 msgstr "పంపిణీ కోసం మెరుగైన మెటాడేటా"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:87
+#: data/com.jeffser.Pigment.metainfo.xml.in:95
 msgid "New icon"
 msgstr "కొత్త చిహ్నం"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:88
+#: data/com.jeffser.Pigment.metainfo.xml.in:96
 msgid "Removed unnecessary permissions to access network"
 msgstr "నెట్‌వర్క్‌ను యాక్సెస్ చేయడానికి అనవసరమైన అనుమతులను తొలగించారు."
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:89
+#: data/com.jeffser.Pigment.metainfo.xml.in:97
 msgid "Added translation to spanish"
 msgstr "స్పానిష్‌కి అనువాదం జోడించబడింది"
 
-#: data/com.jeffser.Pigment.metainfo.xml.in:95
+#: data/com.jeffser.Pigment.metainfo.xml.in:103
 msgid "Initial Release"
 msgstr "ప్రారంభ విడుదల"
 
-#: src/window.py:63
+#: src/window.py:64
 msgid "Image files"
 msgstr "చిత్ర ఫైళ్లు"
 
-#: src/window.py:72
+#: src/window.py:73
 msgid "Palette copied to clipboard."
 msgstr "ప్యాలెట్ క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది."
 
-#: src/window.py:72
+#: src/window.py:73
 msgid "Color copied to clipboard."
 msgstr "రంగు క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది."
 
-#: src/window.py:120
+#: src/window.py:129
+msgid "Error generating palette: {}"
+msgstr ""
+
+#: src/window.py:146
 msgid "Click the image or drop a file into it to generate another palette!"
 msgstr ""
 
@@ -117,8 +133,8 @@ msgid "Select an image to get started!"
 msgstr "ప్రారంభించడానికి ఒక చిత్రాన్ని ఎంచుకోండి!"
 
 #: src/window.ui:57
-msgid "Upload Image"
-msgstr "చిత్రాన్ని అప్‌లోడ్ చేయండి"
+msgid "Select Image"
+msgstr ""
 
 #: src/window.ui:136
 msgid "Quality"
@@ -137,33 +153,43 @@ msgid "Start by generating a palette"
 msgstr "ప్యాలెట్‌ను రూపొందించడం ద్వారా ప్రారంభించండి"
 
 #: src/window.ui:233
-msgid "Autogenerate Palette After Uploading Image"
-msgstr "చిత్రాన్ని అప్‌లోడ్ చేసిన తర్వాత ప్యాలెట్‌ను ఆటోజెనరేట్ చేయండి"
+msgid "Autogenerate Palette After Selecting Image"
+msgstr ""
 
 #: src/window.ui:238
 msgid "Display Colors in Uppercase"
 msgstr "రంగులను పెద్ద అక్షరాలలో ప్రదర్శించు"
 
 #: src/window.ui:243
+msgid "Skip Duplicate Colors in the Palette"
+msgstr ""
+
+#: src/window.ui:248
 msgid "Default Color Format"
 msgstr "డిఫాల్ట్ రంగు ఫార్మాట్"
 
-#: src/window.ui:265
+#: src/window.ui:270
 msgid "Preferences"
 msgstr "ప్రాధాన్యతలు"
 
-#: src/window.ui:269
+#: src/window.ui:274
 msgid "Take Screenshot"
 msgstr "స్క్రీన్‌షాట్ తీసుకోండి"
 
-#: src/window.ui:273
+#: src/window.ui:278
 msgid "Keyboard Shortcuts"
 msgstr "కీబోర్డ్ సత్వరమార్గాలు"
 
-#: src/window.ui:277
+#: src/window.ui:282
 msgid "About Pigment"
 msgstr "పిగ్మెంట్ గురించి"
 
-#: src/widgets.py:91 src/widgets.py:117
+#: src/widgets.py:98 src/widgets.py:124
 msgid "Copy Color"
 msgstr "రంగును కాపీ చేయండి"
+
+#~ msgid "Upload Image"
+#~ msgstr "చిత్రాన్ని అప్‌లోడ్ చేయండి"
+
+#~ msgid "Autogenerate Palette After Uploading Image"
+#~ msgstr "చిత్రాన్ని అప్‌లోడ్ చేసిన తర్వాత ప్యాలెట్‌ను ఆటోజెనరేట్ చేయండి"
