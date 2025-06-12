@@ -146,12 +146,7 @@ class PigmentWindow(Adw.ApplicationWindow):
 
                 if palette and len(palette) > 0:
                     self.on_generate(palette[:number])
-<<<<<<< HEAD
-
-        GLib.idle_add(self.action_toggle, ('upload', 'generate', 'copy_all', 'screenshot'), True)
-=======
         GLib.idle_add(self.action_toggle, ('select', 'generate', 'copy_all', 'screenshot'), True)
->>>>>>> f7321dd (Changed wording upload -> select)
         GLib.idle_add(self.palette_stack.set_visible_child_name, 'content')
 
         if not self.settings.get_boolean('skip-tutorial'):
