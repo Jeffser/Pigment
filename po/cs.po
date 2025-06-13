@@ -1,0 +1,190 @@
+# Czech translation for Pigment
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Amerey <info@amerey.eu>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-13 20:01+0200\n"
+"PO-Revision-Date: 2025-06-13 20:21+0200\n"
+"Last-Translator: Amerey <info@amerey.eu>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:7 src/window.ui:6
+msgid "Pigment"
+msgstr "Pigment"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:8
+msgid "Get color palettes from images"
+msgstr "Získání barevných palet z obrázků"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:10
+msgid ""
+"Pigment allows you to extract a palette of colors from your images offline. "
+"You can select the speed and accuracy by modifying the number and quality of "
+"colors."
+msgstr ""
+"Pigment umožňuje extrahovat paletu barev z vašich obrázků offline. Rychlost "
+"a přesnost si můžete zvolit úpravou počtu a kvality barev."
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:52
+msgid "Example image showing fish"
+msgstr "Ukázkový obrázek zobrazující rybu"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:56
+msgid "Example image showing Niko from Oneshot"
+msgstr "Ukázkový obrázek zobrazující Nika z Oneshot"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:60
+msgid "Example image showing an alpaca"
+msgstr "Ukázkový obrázek zobrazující alpaku"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:64
+msgid "Example image showing a Japanese painting"
+msgstr "Ukázkový obrázek zobrazující japonskou malbu"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:72
+msgid "Added German translation"
+msgstr "Přidán německý překlad"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Changed wording from 'Upload' to 'Select'"
+msgstr "Změněna formulace z „Nahrát“ na „Vybrat“"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:74
+msgid "Added option to skip duplicated colors"
+msgstr "Přidána možnost přeskakování duplicitních barev"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:80
+msgid "Added Telugu translation"
+msgstr "Přidán telugský překlad"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:81
+msgid "Added option to take screenshots"
+msgstr "Přidána možnost pořizovat snímky obrazovky"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:82
+msgid "Added option to copy the whole palette"
+msgstr "Přidána možnost kopírování celé palety"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:88
+msgid "Added option to capitalize colors"
+msgstr "Přidána možnost použití velkých písmen v názvech barev"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:89
+msgid "Better metadata for distribution"
+msgstr "Lepší metadata pro distribuci"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:95
+msgid "New icon"
+msgstr "Nová ikona"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:96
+msgid "Removed unnecessary permissions to access network"
+msgstr "Odebrána nepotřebná oprávnění pro přístup k síti"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:97
+msgid "Added translation to spanish"
+msgstr "Přidán španělský překlad"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:103
+msgid "Initial Release"
+msgstr "První verze"
+
+#: src/window.py:64
+msgid "Image files"
+msgstr "Soubory obrázků"
+
+#: src/window.py:73
+msgid "Palette copied to clipboard."
+msgstr "Paleta zkopírována do schránky."
+
+#: src/window.py:73
+msgid "Color copied to clipboard."
+msgstr "Barva zkopírována do schránky."
+
+#: src/window.py:129
+msgid "Error generating palette: {}"
+msgstr "Chyba při generování palety: {}"
+
+#: src/window.py:146
+msgid "Click the image or drop a file into it to generate another palette!"
+msgstr ""
+"Kliknutím na obrázek nebo přetažením souboru na něj vygenerujete další "
+"paletu!"
+
+#: src/window.ui:23
+msgid "Copy Palette"
+msgstr "Kopírovat paletu"
+
+#: src/window.ui:33
+msgid "Main Menu"
+msgstr "Hlavní menu"
+
+#: src/window.ui:49
+msgid "Select an image to get started!"
+msgstr "Začněte výběrem obrázku!"
+
+#: src/window.ui:57
+msgid "Select Image"
+msgstr "Vybrat obrázek"
+
+#: src/window.ui:136
+msgid "Quality"
+msgstr "Kvalita"
+
+#: src/window.ui:149
+msgid "Number of Colors"
+msgstr "Počet barev"
+
+#: src/window.ui:162
+msgid "Generate Palette"
+msgstr "Vytvořit paletu"
+
+#: src/window.ui:185
+msgid "Start by generating a palette"
+msgstr "Začněte vytvořením palety"
+
+#: src/window.ui:233
+msgid "Autogenerate Palette After Selecting Image"
+msgstr "Automaticky vygenerovat paletu po výběru obrázku"
+
+#: src/window.ui:238
+msgid "Display Colors in Uppercase"
+msgstr "Zobrazení barev velkými písmeny"
+
+#: src/window.ui:243
+msgid "Skip Duplicate Colors in the Palette"
+msgstr "Přeskočit duplicitní barvy v paletě"
+
+#: src/window.ui:248
+msgid "Default Color Format"
+msgstr "Výchozí formát barev"
+
+#: src/window.ui:270
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: src/window.ui:274
+msgid "Take Screenshot"
+msgstr "Vytvořit snímek obrazovky"
+
+#: src/window.ui:278
+msgid "Keyboard Shortcuts"
+msgstr "Klávesové zkratky"
+
+#: src/window.ui:282
+msgid "About Pigment"
+msgstr "O aplikaci Pigment"
+
+#: src/widgets.py:98 src/widgets.py:124
+msgid "Copy Color"
+msgstr "Kopírovat barvu"
