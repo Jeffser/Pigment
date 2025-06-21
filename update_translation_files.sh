@@ -9,7 +9,9 @@ declare -A languages=(
     [es]="Spanish"
     [te]="Telugu"
     [de]="German"
-    [nl]="Dutch"
+    [nl]="Dutch",
+    [bn]="Bengali",
+    [hi]="Hindi"
 )
 
 for code in "${!languages[@]}"; do

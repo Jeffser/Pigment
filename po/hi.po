@@ -1,9 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Hindi translations for Pigment package.
+# Copyright (C) 2025 Jeffry Samuel Eduarte Rojas
+# This file is distributed under the same license as the Pigment package.
 # Aritra Saha, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.4.0\n"

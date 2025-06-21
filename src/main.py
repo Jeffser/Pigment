@@ -29,7 +29,9 @@ from .window import PigmentWindow
 TRANSLATORS = [
     'Jeffry Samuel (Spanish) https://github.com/jeffser',
     'Aryan Karamtoth (Telugu) https://github.com/SpaciousCoder78',
-    'Magnus Schlinsog (German) https://github.com/mags0ft'
+    'Magnus Schlinsog (German) https://github.com/mags0ft',
+    'Aritra Saha (Bengali) https://github.com/olumolu',
+    'Aritra Saha (Hindi) https://github.com/olumolu'
 ]
 
 COPYRIGHT = """© 2025 Jeffry Samuel Eduarte Rojas.
