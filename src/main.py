@@ -31,7 +31,8 @@ TRANSLATORS = [
     'Aryan Karamtoth (Telugu) https://github.com/SpaciousCoder78',
     'Magnus Schlinsog (German) https://github.com/mags0ft',
     'Aritra Saha (Bengali) https://github.com/olumolu',
-    'Aritra Saha (Hindi) https://github.com/olumolu'
+    'Aritra Saha (Hindi) https://github.com/olumolu',
+    'Amerey (Czech) https://github.com/Amereyeu'
 ]
 
 COPYRIGHT = """© 2025 Jeffry Samuel Eduarte Rojas.

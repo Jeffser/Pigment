@@ -54,6 +54,7 @@ Language               | Contributors
 🇩🇪 German              | [Magnus Schlinsog](https://github.com/mags0ft)
 🇮🇳 Bengali             | [Aritra Saha](https://github.com/olumolu)
 🇮🇳 Hindi               | [Aritra Saha](https://github.com/olumolu)
+🇨🇿 Czech               | [Amerey](https://github.com/Amereyeu)
 
 ## Thanks
 
