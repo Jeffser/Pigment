@@ -47,20 +47,51 @@
                     <property name="icon-name">com.jeffser.Pigment</property>
                     <property name="title">Pigment</property>
                     <property name="description" translatable="yes">Select an image to get started!</property>
+
                     <property name="child">
-                      <object class="GtkButton">
-                        <property name="action-name">app.select</property>
+                      <object class="GtkBox">
+                        <property name="orientation">1</property>
+                        <property name="spacing">12</property>
                         <property name="halign">3</property>
-                        <property name="child">
-                          <object class="AdwButtonContent">
-                            <property name="icon-name">share-symbolic</property>
-                            <property name="label" translatable="yes">Select Image</property>
+
+                        <child>
+                          <object class="GtkButton">
+                            <property name="action-name">app.select</property>
+                            <property name="halign">3</property>
+                            <property name="width-request">200</property>
+
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">share-symbolic</property>
+                                <property name="label" translatable="yes">Select Image</property>
+                              </object>
+                            </property>
+
+                            <style>
+                              <class name="suggested-action"/>
+                              <class name="pill"/>
+                            </style>
                           </object>
-                        </property>
-                        <style>
-                          <class name="suggested-action"/>
-                          <class name="pill"/>
-                        </style>
+                        </child>
+
+                        <child>
+                          <object class="GtkButton">
+                            <property name="action-name">app.screenshot</property>
+                            <property name="halign">3</property>
+                            <property name="width-request">200</property>
+
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">camera-photo-symbolic</property>
+                                <property name="label" translatable="yes">Take Screenshot</property>
+                              </object>
+                            </property>
+                            
+                            <style>
+                              <class name="pill"/>
+                            </style>
+                          </object>
+                        </child>
                       </object>
                     </property>
                   </object>

@@ -4,6 +4,7 @@
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file alias="icons/scalable/status/share-symbolic.svg">icons/share-symbolic.svg</file>
+    <file alias="icons/scalable/status/camera-photo-symbolic.svg">icons/camera-photo-symbolic.svg</file>
     <file alias="icons/scalable/status/edit-copy-symbolic.svg">icons/edit-copy-symbolic.svg</file>
     <file>style.css</file>
   </gresource>
