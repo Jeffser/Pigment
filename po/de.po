@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 0.4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-11 20:49-0600\n"
-"PO-Revision-Date: 2025-06-10 11:54+0200\n"
+"PO-Revision-Date: 2025-07-04 22:34+0200\n"
 "Last-Translator: Magnus Schlinsog <magnusschlinsog@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -54,15 +54,15 @@ msgstr "Beispielbild eines japanischen Gemäldes"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
 msgid "Added German translation"
-msgstr ""
+msgstr "Deutsche Übersetzung hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
 msgid "Changed wording from 'Upload' to 'Select'"
-msgstr ""
+msgstr "Knopfbeschriftung von \"Hochladen\" zu \"Auswählen\" geändert"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
 msgid "Added option to skip duplicated colors"
-msgstr ""
+msgstr "Option zum Auslassen doppelter Farben in Paletten hinzugefügt"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added Telugu translation"
@@ -114,7 +114,7 @@ msgstr "Farbe in die Zwischenablage kopiert."
 
 #: src/window.py:129
 msgid "Error generating palette: {}"
-msgstr ""
+msgstr "Fehler beim Generieren der Palette: {}"
 
 #: src/window.py:146
 msgid "Click the image or drop a file into it to generate another palette!"
@@ -136,7 +136,7 @@ msgstr "Wähle ein Bild, um loszulegen!"
 
 #: src/window.ui:57
 msgid "Select Image"
-msgstr ""
+msgstr "Bild auswählen"
 
 #: src/window.ui:136
 msgid "Quality"
@@ -156,7 +156,7 @@ msgstr "Lege los, indem Du eine Palette generierst!"
 
 #: src/window.ui:233
 msgid "Autogenerate Palette After Selecting Image"
-msgstr ""
+msgstr "Palette nach Bildauswahl automatisch generieren"
 
 #: src/window.ui:238
 msgid "Display Colors in Uppercase"
@@ -164,7 +164,7 @@ msgstr "Farben in Großbuchstaben anzeigen"
 
 #: src/window.ui:243
 msgid "Skip Duplicate Colors in the Palette"
-msgstr ""
+msgstr "Doppelte Farben in einer Palette verhindern"
 
 #: src/window.ui:248
 msgid "Default Color Format"
