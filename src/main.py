@@ -32,7 +32,8 @@ TRANSLATORS = [
     'Magnus Schlinsog (German) https://github.com/mags0ft',
     'Aritra Saha (Bengali) https://github.com/olumolu',
     'Aritra Saha (Hindi) https://github.com/olumolu',
-    'Amerey (Czech) https://github.com/Amereyeu'
+    'Amerey (Czech) https://github.com/Amereyeu',
+    'Zefr0x (Arabic) https://github.com/zefr0x'
 ]
 
 COPYRIGHT = """© 2025 Jeffry Samuel Eduarte Rojas.

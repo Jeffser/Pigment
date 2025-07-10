@@ -55,6 +55,7 @@ Language               | Contributors
 🇮🇳 Bengali             | [Aritra Saha](https://github.com/olumolu)
 🇮🇳 Hindi               | [Aritra Saha](https://github.com/olumolu)
 🇨🇿 Czech               | [Amerey](https://github.com/Amereyeu)
+🌐 Arabic              | [Zefr0x](https://github.com/zefr0x)
 
 ## Thanks
 
