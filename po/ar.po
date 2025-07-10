@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# zefr0x <zer0-x.7ty50@aleeas.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pigment 0.5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-11 20:49-0600\n"
+"PO-Revision-Date: 2025-06-27 13:10+0300\n"
+"Last-Translator: zefr0x <zer0-x.7ty50@aleeas.com>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural= n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Gtranslator 48.0\n"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:7 src/window.ui:6
+msgid "Pigment"
+msgstr "صِبَاغ"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:8
+msgid "Get color palettes from images"
+msgstr "احصل على لوحات ألوان من الصور"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:10
+msgid ""
+"Pigment allows you to extract a palette of colors from your images offline. "
+"You can select the speed and accuracy by modifying the number and quality of "
+"colors."
+msgstr "يتيح لك صِبَاغ استخراج لوحة ألوان من صورك محليًا دون اتصال بالشبكة."
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:52
+msgid "Example image showing fish"
+msgstr "مثال على صورة تُظهر سمكة"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:56
+msgid "Example image showing Niko from Oneshot"
+msgstr "مثال على صورة تُظهر نيكو من ون شوت"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:60
+msgid "Example image showing an alpaca"
+msgstr "مثال على صورة تُظهر ألبكة"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:64
+msgid "Example image showing a Japanese painting"
+msgstr "مثال على صورة تُظهر لوحة يابانية"
+
+#: src/window.py:64
+msgid "Image files"
+msgstr "مِلفَّاتُ صُوَر"
+
+#: src/window.py:73
+msgid "Palette copied to clipboard."
+msgstr "نُسِخَت لوحة الألوان إلى الحافظة."
+
+#: src/window.py:73
+msgid "Color copied to clipboard."
+msgstr "نُسِخَ اللون إلى الحافظة."
+
+#: src/window.py:129
+msgid "Error generating palette: {}"
+msgstr "تعذَّر توليد لوحة ألوان: {}"
+
+#: src/window.py:146
+msgid "Click the image or drop a file into it to generate another palette!"
+msgstr "انقر على الصورة أو اسحب ملفًا إليها لتوليد لوحة ألوان أُخرى!"
+
+#: src/window.ui:23
+msgid "Copy Palette"
+msgstr "انسخ لوحة الألوان"
+
+#: src/window.ui:33
+msgid "Main Menu"
+msgstr "القائمة الرئيسة"
+
+#: src/window.ui:49
+msgid "Select an image to get started!"
+msgstr "ابدأ باختيار صُورة!"
+
+#: src/window.ui:57
+msgid "Select Image"
+msgstr "اختر صُورة"
+
+#: src/window.ui:136
+msgid "Quality"
+msgstr "الجَّودَة"
+
+#: src/window.ui:149
+msgid "Number of Colors"
+msgstr "عَدَدُ الألوَان"
+
+#: src/window.ui:162
+msgid "Generate Palette"
+msgstr "وَلِّد لَوحَةَ ألوَان"
+
+#: src/window.ui:185
+msgid "Start by generating a palette"
+msgstr "اِبدأ بِتوليد لوحة ألوان"
+
+#: src/window.ui:233
+msgid "Autogenerate Palette After Selecting Image"
+msgstr "تِلقائيًا وَلِّد لوحةَ ألوانٍ بعدَ اِختِيارِ صُورَة"
+
+#: src/window.ui:238
+msgid "Display Colors in Uppercase"
+msgstr "اعرض الألوان بأحرف كبيرة"
+
+#: src/window.ui:243
+msgid "Skip Duplicate Colors in the Palette"
+msgstr "تجاهل الألوان المكررة في اللوحة"
+
+#: src/window.ui:248
+msgid "Default Color Format"
+msgstr "تنسيق اللون المبدئيّ"
+
+#: src/window.ui:270
+msgid "Preferences"
+msgstr "التفضيلات"
+
+#: src/window.ui:274
+msgid "Take Screenshot"
+msgstr "خُذ لقطَةً لِلشاشة"
+
+#: src/window.ui:278
+msgid "Keyboard Shortcuts"
+msgstr "اختصارات لوحة المفاتيح"
+
+#: src/window.ui:282
+msgid "About Pigment"
+msgstr "حَولَ صِبَاغ"
+
+#: src/widgets.py:98 src/widgets.py:124
+msgid "Copy Color"
+msgstr "اِنسخ اللون"
