@@ -181,25 +181,32 @@ class PigmentWindow(Adw.ApplicationWindow):
         )
 
     def screenshot_requested(self):
-        bus = SessionBus()
-        portal = bus.get("org.freedesktop.portal.Desktop", "/org/freedesktop/portal/desktop")
-        subscription = None
+        loop = GLib.MainLoop()
+        portal = self.bus.get("org.freedesktop.portal.Desktop",
+                              "/org/freedesktop/portal/desktop")
 
-        def on_response(sender, obj, iface, signal, *params):
-            response = params[0]
-            if response[0] == 0:
-                uri = response[1].get("uri")
-                self.on_select(Gio.File.new_for_uri(uri))
-            if subscription:
-                subscription.disconnect()
+        options = {
+            "interactive": GLib.Variant('b', True)
+        }
+        handle = portal.Screenshot("", options)
 
-        subscription = bus.subscribe(
+        def on_response(sender, object_path, interface_name, signal_name, parameters):
+            response_code = parameters[0]
+            results = parameters[1]
+            if response_code == 0 and "uri" in results:
+                uri = results["uri"]
+                file = Gio.File.new_for_uri(uri)
+                self.on_select(file)
+            loop.quit()
+
+        self.bus.subscribe(
             iface="org.freedesktop.portal.Request",
             signal="Response",
+            object=handle,
             signal_fired=on_response
         )
 
-        portal.Screenshot("", {"interactive": Variant('b', True)})
+        loop.run()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -209,6 +216,7 @@ class PigmentWindow(Adw.ApplicationWindow):
         self.get_application().create_action('screenshot', lambda *_: self.screenshot_requested(), ['<primary>S'])
         self.get_application().create_action('copy_all', lambda *_: self.copy_all_requested())
         self.get_application().lookup_action('copy_all').set_enabled(False)
+        self.bus = SessionBus()
 
         for widget in (self.picture_overlay.get_parent(), self.main_stack.get_child_by_name('welcome')):
             drop_target = Gtk.DropTarget.new(
