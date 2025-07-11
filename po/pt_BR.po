@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-11 20:49-0600\n"
-"PO-Revision-Date: 2025-07-10 14:09-0600\n"
-"Last-Translator: YOUR NAME <YOUR EMAIL>\n"
+"PO-Revision-Date: 2025-07-11 15:09-0600\n"
+"Last-Translator: Ezilei Correia <ezilei@yahoo.com.br>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-"
 "translation@lists.sourceforge.net>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:7 src/window.ui:6
 msgid "Pigment"
-msgstr ""
+msgstr "Pigment"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:8
 msgid "Get color palettes from images"
-msgstr ""
+msgstr "Obtenha paletas de cores das imagens"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:10
 msgid ""
@@ -32,155 +32,158 @@ msgid ""
 "You can select the speed and accuracy by modifying the number and quality of "
 "colors."
 msgstr ""
+"Pigment permite que você extraia uma paleta de cores de suas imagens "
+"offline. Você pode selecionar a velocidade e a precisão ao modificar o "
+"número e a qualidade das cores."
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:52
 msgid "Example image showing fish"
-msgstr ""
+msgstr "Imagem de exemplo mostrando peixes"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:56
 msgid "Example image showing Niko from Oneshot"
-msgstr ""
+msgstr "Imagem de exemplo mostrando Niko de Oneshot"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:60
 msgid "Example image showing an alpaca"
-msgstr ""
+msgstr "Imagem de exemplo mostrando uma alpaca"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:64
 msgid "Example image showing a Japanese painting"
-msgstr ""
+msgstr "Imagem de exemplo mostrando uma pintura japonesa"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
 msgid "Added German translation"
-msgstr ""
+msgstr "Adicionada tradução em alemão"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
 msgid "Changed wording from 'Upload' to 'Select'"
-msgstr ""
+msgstr "Mudou a redação de 'Upload' para 'Selecionar'"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
 msgid "Added option to skip duplicated colors"
-msgstr ""
+msgstr "Adicionada a opção para pular cores duplicadas"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added Telugu translation"
-msgstr ""
+msgstr "Adicionada tradução em telugu"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:81
 msgid "Added option to take screenshots"
-msgstr ""
+msgstr "Adicionada a opção de tirar capturas de tela"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:82
 msgid "Added option to copy the whole palette"
-msgstr ""
+msgstr "Adicionada a opção de copiar toda a paleta"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:88
 msgid "Added option to capitalize colors"
-msgstr ""
+msgstr "Adicionada a opção de capitalizar cores"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:89
 msgid "Better metadata for distribution"
-msgstr ""
+msgstr "Melhores metadados para a distribuição"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:95
 msgid "New icon"
-msgstr ""
+msgstr "Novo ícone"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:96
 msgid "Removed unnecessary permissions to access network"
-msgstr ""
+msgstr "Removidas permissões desnecessárias para acessar a rede"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:97
 msgid "Added translation to spanish"
-msgstr ""
+msgstr "Adicionada tradução para o espanhol"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:103
 msgid "Initial Release"
-msgstr ""
+msgstr "Lançamento Inicial"
 
 #: src/window.py:64
 msgid "Image files"
-msgstr ""
+msgstr "Arquivos de imagens"
 
 #: src/window.py:73
 msgid "Palette copied to clipboard."
-msgstr ""
+msgstr "Paleta copiada para a área de transferência."
 
 #: src/window.py:73
 msgid "Color copied to clipboard."
-msgstr ""
+msgstr "Cor copiada para a área de transferência."
 
 #: src/window.py:129
 msgid "Error generating palette: {}"
-msgstr ""
+msgstr "Erro ao gerar paleta: {}"
 
 #: src/window.py:146
 msgid "Click the image or drop a file into it to generate another palette!"
-msgstr ""
+msgstr "Clique na imagem ou arraste um arquivo para gerar outra paleta!"
 
 #: src/window.ui:23
 msgid "Copy Palette"
-msgstr ""
+msgstr "Copiar Paleta"
 
 #: src/window.ui:33
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: src/window.ui:49
 msgid "Select an image to get started!"
-msgstr ""
+msgstr "Selecione uma imagem para começar!"
 
 #: src/window.ui:57
 msgid "Select Image"
-msgstr ""
+msgstr "Selecionar Imagem"
 
 #: src/window.ui:136
 msgid "Quality"
-msgstr ""
+msgstr "Qualidade"
 
 #: src/window.ui:149
 msgid "Number of Colors"
-msgstr ""
+msgstr "Número de Cores"
 
 #: src/window.ui:162
 msgid "Generate Palette"
-msgstr ""
+msgstr "Gerar Paleta"
 
 #: src/window.ui:185
 msgid "Start by generating a palette"
-msgstr ""
+msgstr "Comece gerando uma paleta"
 
 #: src/window.ui:233
 msgid "Autogenerate Palette After Selecting Image"
-msgstr ""
+msgstr "Gerar Paleta Automaticamente após Selecionar Imagem"
 
 #: src/window.ui:238
 msgid "Display Colors in Uppercase"
-msgstr ""
+msgstr "Exibir Cores em Maiúsculas"
 
 #: src/window.ui:243
 msgid "Skip Duplicate Colors in the Palette"
-msgstr ""
+msgstr "Pular Cores Duplicadas na Paleta"
 
 #: src/window.ui:248
 msgid "Default Color Format"
-msgstr ""
+msgstr "Formato de Cor Padrão"
 
 #: src/window.ui:270
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: src/window.ui:274
 msgid "Take Screenshot"
-msgstr ""
+msgstr "Tirar uma Captura de Tela"
 
 #: src/window.ui:278
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos do Teclado"
 
 #: src/window.ui:282
 msgid "About Pigment"
-msgstr ""
+msgstr "Sobre Pigment"
 
 #: src/widgets.py:98 src/widgets.py:124
 msgid "Copy Color"
-msgstr ""
+msgstr "Copiar Cor"
