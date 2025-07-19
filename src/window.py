@@ -16,8 +16,9 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
-
-from gi.repository import Gtk, Adw, Gio, Gdk, GLib
+import gi
+gi.require_version('Xdp', '1.0')
+from gi.repository import Gtk, Adw, Gio, Gdk, GLib, Xdp
 
 import os, threading
 from colorthief import ColorThief
@@ -181,32 +182,18 @@ class PigmentWindow(Adw.ApplicationWindow):
         )
 
     def screenshot_requested(self):
-        loop = GLib.MainLoop()
-        portal = self.bus.get("org.freedesktop.portal.Desktop",
-                              "/org/freedesktop/portal/desktop")
+        def on_response(portal, res, user_data):
+            filename = portal.take_screenshot_finish(res)
+            if filename:
+                self.on_select(Gio.File.new_for_uri(filename))
 
-        options = {
-            "interactive": GLib.Variant('b', True)
-        }
-        handle = portal.Screenshot("", options)
-
-        def on_response(sender, object_path, interface_name, signal_name, parameters):
-            response_code = parameters[0]
-            results = parameters[1]
-            if response_code == 0 and "uri" in results:
-                uri = results["uri"]
-                file = Gio.File.new_for_uri(uri)
-                self.on_select(file)
-            loop.quit()
-
-        self.bus.subscribe(
-            iface="org.freedesktop.portal.Request",
-            signal="Response",
-            object=handle,
-            signal_fired=on_response
+        Xdp.Portal().take_screenshot(
+            None,
+            Xdp.ScreenshotFlags.INTERACTIVE,
+            None,
+            on_response,
+            None
         )
-
-        loop.run()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -216,7 +203,6 @@ class PigmentWindow(Adw.ApplicationWindow):
         self.get_application().create_action('screenshot', lambda *_: self.screenshot_requested(), ['<primary>S'])
         self.get_application().create_action('copy_all', lambda *_: self.copy_all_requested())
         self.get_application().lookup_action('copy_all').set_enabled(False)
-        self.bus = SessionBus()
 
         for widget in (self.picture_overlay.get_parent(), self.main_stack.get_child_by_name('welcome')):
             drop_target = Gtk.DropTarget.new(
