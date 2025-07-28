@@ -53,15 +53,15 @@ msgstr "Imagen de ejemplo que muestra una pintura japonesa"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:72
 msgid "Added German translation"
-msgstr ""
+msgstr "Se agregó la traducción a Alemán"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:73
 msgid "Changed wording from 'Upload' to 'Select'"
-msgstr ""
+msgstr "Se cambió el término de 'Subir' a 'Seleccionar'"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:74
 msgid "Added option to skip duplicated colors"
-msgstr ""
+msgstr "Se agregó la opción para omitir los colores duplicados"
 
 #: data/com.jeffser.Pigment.metainfo.xml.in:80
 msgid "Added Telugu translation"
@@ -113,11 +113,11 @@ msgstr "Color copiado al portapapeles."
 
 #: src/window.py:129
 msgid "Error generating palette: {}"
-msgstr ""
+msgstr "Error al generar la paleta: {}"
 
 #: src/window.py:146
 msgid "Click the image or drop a file into it to generate another palette!"
-msgstr ""
+msgstr "Da click en la imagen o suelta un archivo en el área para generar otra paleta!"
 
 #: src/window.ui:23
 msgid "Copy Palette"
@@ -133,7 +133,7 @@ msgstr "¡Selecciona una imagen para comenzar!"
 
 #: src/window.ui:57
 msgid "Select Image"
-msgstr ""
+msgstr "Seleccionar Imagen"
 
 #: src/window.ui:136
 msgid "Quality"
@@ -153,7 +153,7 @@ msgstr "Comienza generando una paleta"
 
 #: src/window.ui:233
 msgid "Autogenerate Palette After Selecting Image"
-msgstr ""
+msgstr "Generar Paleta Automáticamente Después de Seleccionar una Imagen"
 
 #: src/window.ui:238
 msgid "Display Colors in Uppercase"
@@ -161,7 +161,7 @@ msgstr "Mostrar Colores en Mayúsculas"
 
 #: src/window.ui:243
 msgid "Skip Duplicate Colors in the Palette"
-msgstr ""
+msgstr "Omitir Colores Duplicados en la Paleta"
 
 #: src/window.ui:248
 msgid "Default Color Format"
