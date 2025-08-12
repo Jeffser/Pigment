@@ -66,6 +66,13 @@
   </screenshots>
 
   <releases>
+    <release version="0.5.1" date="2025-08-12">
+      <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.5.1</url>
+      <description>
+        <p>New translations</p>
+        <p>More Stable screenshots</p>
+      </description>
+    </release>
     <release version="0.5.0" date="2025-06-11">
       <url type="details">https://github.com/Jeffser/Pigment/releases/tag/0.5.0</url>
       <description>
