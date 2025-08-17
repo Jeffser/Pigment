@@ -47,15 +47,18 @@ Pigment is distributed with Flatpak - make sure your distribution supports Flatp
 
 ## Translators
 
-Language               | Contributors
-:----------------------|:-----------
-🇪🇸 Spanish             | [Jeffry Samuel](https://github.com/jeffser)
-🇮🇳 Telugu              | [Aryan Karamtoth](https://github.com/SpaciousCoder78)
-🇩🇪 German              | [Magnus Schlinsog](https://github.com/mags0ft)
-🇮🇳 Bengali             | [Aritra Saha](https://github.com/olumolu)
-🇮🇳 Hindi               | [Aritra Saha](https://github.com/olumolu)
-🇨🇿 Czech               | [Amerey](https://github.com/Amereyeu)
-🌐 Arabic              | [Zefr0x](https://github.com/zefr0x)
+Language                | Contributors
+:-----------------------|:-----------
+🇪🇸 Spanish              | [Jeffry Samuel](https://github.com/jeffser)
+🇮🇳 Telugu               | [Aryan Karamtoth](https://github.com/SpaciousCoder78)
+🇩🇪 German               | [Magnus Schlinsog](https://github.com/mags0ft)
+🇮🇳 Bengali              | [Aritra Saha](https://github.com/olumolu)
+🇮🇳 Hindi                | [Aritra Saha](https://github.com/olumolu)
+🇨🇿 Czech                | [Amerey](https://github.com/Amereyeu)
+🌐 Arabic               | [Zefr0x](https://github.com/zefr0x)
+🌐 Occitan              | [Quentin PAGÈS](https://github.com/Mejans)
+🇧🇷 Brazilian Portuguese | [Ezilei Correia](https://github.com/ezileicorreia)
+🦁 Persian              | [Danial Behzadi](https://github.com/danialbehzadi)
 
 ## Thanks
 

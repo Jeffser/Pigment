@@ -33,7 +33,10 @@ TRANSLATORS = [
     'Aritra Saha (Bengali) https://github.com/olumolu',
     'Aritra Saha (Hindi) https://github.com/olumolu',
     'Amerey (Czech) https://github.com/Amereyeu',
-    'Zefr0x (Arabic) https://github.com/zefr0x'
+    'Zefr0x (Arabic) https://github.com/zefr0x',
+    'Quentin PAGÈS (Occitan) https://github.com/Mejans',
+    'Ezilei Correia (Brazilian Portuguese) https://github.com/ezileicorreia',
+    'Danial Behzadi (Persian) https://github.com/danialbehzadi'
 ]
 
 COPYRIGHT = """© 2025 Jeffry Samuel Eduarte Rojas.
