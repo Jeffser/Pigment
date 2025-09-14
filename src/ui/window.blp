@@ -1,0 +1,247 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $PigmentWindow: Adw.ApplicationWindow {
+  title: _("Pigment");
+  default-width: 800;
+  default-height: 600;
+
+  Adw.Breakpoint {
+    condition ("max-width: 500px")
+
+    setters {
+      top_container.orientation: vertical;
+    }
+  }
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [start]
+      Button {
+        icon-name: "edit-copy-symbolic";
+        action-name: "app.copy_all";
+        tooltip-text: _("Copy Palette");
+
+        styles [
+          "flat",
+        ]
+      }
+
+      [end]
+      MenuButton {
+        primary: true;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+        menu-model: primary_menu;
+      }
+    }
+
+    content: Stack main_stack {
+      transition-type: crossfade;
+
+      StackPage {
+        name: "welcome";
+
+        child: Adw.StatusPage {
+          icon-name: "com.jeffser.Pigment";
+          title: "Pigment";
+          description: _("Select an image to get started!");
+
+          child: Box {
+            orientation: vertical;
+            spacing: 12;
+            halign: center;
+
+            Button {
+              action-name: "app.select";
+              halign: center;
+              width-request: 200;
+
+              child: Adw.ButtonContent {
+                icon-name: "share-symbolic";
+                label: _("Select Image");
+              };
+
+              styles [
+                "suggested-action",
+                "pill",
+              ]
+            }
+
+            Button {
+              action-name: "app.screenshot";
+              halign: center;
+              width-request: 200;
+
+              child: Adw.ButtonContent {
+                icon-name: "camera-photo-symbolic";
+                label: _("Take Screenshot");
+              };
+
+              styles [
+                "pill",
+              ]
+            }
+          };
+        };
+      }
+
+      StackPage {
+        name: "content";
+
+        child: Adw.ToastOverlay toast_overlay {
+          child: ScrolledWindow {
+            overflow: hidden;
+            hexpand: true;
+
+            child: Adw.Clamp {
+              maximum-size: 600;
+              tightening-threshold: 400;
+
+              child: Box {
+                styles [
+                  "card",
+                  "p10",
+                ]
+
+                margin-bottom: 10;
+                margin-start: 10;
+                margin-end: 10;
+                orientation: vertical;
+                spacing: 10;
+                valign: center;
+
+                Box top_container {
+                  orientation: horizontal;
+                  spacing: 10;
+
+                  Button {
+                    action-name: "app.select";
+
+                    styles [
+                      "p0",
+                      "picture_button",
+                      "flat",
+                    ]
+
+                    hexpand: true;
+                    overflow: hidden;
+
+                    child: Overlay picture_overlay {
+                      child: Picture {
+                        content-fit: cover;
+                        height-request: 150;
+                      };
+
+                      [overlay]
+                      Image {
+                        icon-name: "share-symbolic";
+                        icon-size: large;
+
+                        styles [
+                          "picture_indicator",
+                          "background",
+                        ]
+                      }
+                    };
+                  }
+
+                  Adw.PreferencesGroup {
+                    valign: center;
+
+                    Adw.SpinRow preference_quality {
+                      title: _("Quality");
+
+                      adjustment: Adjustment {
+                        lower: 1;
+                        upper: 10;
+                        step-increment: 1;
+                        value: 10;
+                      };
+                    }
+
+                    Adw.SpinRow preference_number {
+                      title: _("Number of Colors");
+
+                      adjustment: Adjustment {
+                        lower: 1;
+                        upper: 50;
+                        step-increment: 1;
+                        value: 10;
+                      };
+                    }
+
+                    Adw.ButtonRow {
+                      title: _("Generate Palette");
+                      action-name: "app.generate";
+
+                      styles [
+                        "accent",
+                      ]
+                    }
+                  }
+                }
+
+                Separator {}
+
+                Stack palette_stack {
+                  vexpand: true;
+                  transition-type: crossfade;
+
+                  StackPage {
+                    name: "no-content";
+
+                    child: Label {
+                      label: _("Start by generating a palette");
+
+                      styles [
+                        "dim-label",
+                      ]
+                    };
+                  }
+
+                  StackPage {
+                    name: "loading";
+
+                    child: Adw.Spinner {};
+                  }
+
+                  StackPage {
+                    name: "content";
+
+                    child: Adw.Bin palette_container {};
+                  }
+                }
+              };
+            };
+          };
+        };
+      }
+    };
+  };
+}
+
+menu primary_menu {
+  section {
+    item {
+      label: _("Preferences");
+      action: "app.preferences";
+    }
+
+    item {
+      label: _("Take Screenshot");
+      action: "app.screenshot";
+    }
+
+    item {
+      label: _("Keyboard Shortcuts");
+      action: "app.shortcuts";
+    }
+
+    item {
+      label: _("About Pigment");
+      action: "app.about";
+    }
+  }
+}

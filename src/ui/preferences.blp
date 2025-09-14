@@ -1,0 +1,33 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $PigmentPreferencesDialog: Adw.PreferencesDialog {
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup {
+      Adw.SwitchRow autogenerate_switch {
+        title: _("Autogenerate Palette After Selecting Image");
+      }
+
+      Adw.SwitchRow uppercase_switch {
+        title: _("Display Colors in Uppercase");
+      }
+
+      Adw.SwitchRow skip_duplicated_colors_switch {
+        title: _("Skip Duplicate Colors in the Palette");
+      }
+
+      Adw.ComboRow default_format_switch {
+        title: _("Default Color Format");
+
+        model: StringList {
+          strings [
+            "HEX",
+            "RGB",
+            "HSL",
+            "HSV",
+          ]
+        };
+      }
+    }
+  }
+}

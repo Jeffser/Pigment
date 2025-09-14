@@ -2,11 +2,32 @@ pkgdatadir = get_option('prefix') / get_option('datadir') / meson.project_name()
 moduledir = pkgdatadir / 'pigment'
 gnome = import('gnome')
 
-gnome.compile_resources('pigment',
+blueprints = files(
+  'ui/preferences.blp',
+  'ui/shortcuts.blp',
+  'ui/window.blp'
+)
+
+blueprints = custom_target('blueprints',
+  input: blueprints,
+  output: '.',
+  command: [
+    find_program('blueprint-compiler', version: '>= 0.18.0'),
+    'batch-compile',
+    '@OUTPUT@',
+    '@CURRENT_SOURCE_DIR@',
+    '@INPUT@'
+  ],
+)
+
+gnome.compile_resources(
+  'pigment',
   'pigment.gresource.xml',
   gresource_bundle: true,
   install: true,
   install_dir: pkgdatadir,
+  dependencies: blueprints,
+  source_dir: meson.current_source_dir(),
 )
 
 python = import('python')

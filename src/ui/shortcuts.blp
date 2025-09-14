@@ -1,0 +1,27 @@
+using Gtk 4.0;
+
+$AdwShortcutsDialog shortcuts_dialog {
+  $AdwShortcutsSection {
+    title: _("General");
+
+    $AdwShortcutsItem {
+      title: C_("shortcut window", "Show Shortcuts");
+      action-name: "app.shortcuts";
+    }
+
+    $AdwShortcutsItem {
+      title: C_("shortcut window", "Generate Palette");
+      action-name: "app.generate";
+    }
+
+    $AdwShortcutsItem {
+      title: C_("shortcut window", "Select Image");
+      action-name: "app.select";
+    }
+
+    $AdwShortcutsItem {
+      title: C_("shortcut window", "Quit");
+      action-name: "app.quit";
+    }
+  }
+}
