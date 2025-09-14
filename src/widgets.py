@@ -1,6 +1,6 @@
 # widgets.py
 
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio
 
 import colorsys
 
@@ -131,3 +131,46 @@ class Color:
         self.button.set_popover(ColorPopover(self))
         self.button.connect('clicked', lambda button, text=self.default_value: button.get_root().copy_requested(text))
         self.button.get_child().get_parent().add_css_class('p0')
+
+@Gtk.Template(resource_path='/com/jeffser/Pigment/preferences.ui')
+class PreferencesDialog(Adw.PreferencesDialog):
+    __gtype_name__ = 'PigmentPreferencesDialog'
+
+    autogenerate_switch = Gtk.Template.Child()
+    uppercase_switch = Gtk.Template.Child()
+    skip_duplicated_colors_switch = Gtk.Template.Child()
+    default_format_switch = Gtk.Template.Child()
+
+    def __init__(self):
+        super().__init__()
+
+        self.settings = Gio.Settings(schema_id='com.jeffser.Pigment')
+
+        self.settings.bind(
+            'autogenerate',
+            self.autogenerate_switch,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        )
+
+        self.settings.bind(
+            'format-uppercase',
+            self.uppercase_switch,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        )
+
+        self.settings.bind(
+            'skip-duplicated-colors',
+            self.skip_duplicated_colors_switch,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        )
+
+        self.settings.bind(
+            'default-format',
+            self.default_format_switch,
+            'selected',
+            Gio.SettingsBindFlags.DEFAULT
+        )
+

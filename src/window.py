@@ -24,7 +24,7 @@ import os, threading
 from colorthief import ColorThief
 from pydbus import SessionBus, Variant
 
-from .widgets import Color
+from .widgets import Color, PreferencesDialog
 
 
 @Gtk.Template(resource_path='/com/jeffser/Pigment/window.ui')
@@ -40,12 +40,6 @@ class PigmentWindow(Adw.ApplicationWindow):
 
     preference_quality = Gtk.Template.Child()
     preference_number = Gtk.Template.Child()
-
-    preferences_dialog = Gtk.Template.Child()
-    autogenerate_switch = Gtk.Template.Child()
-    uppercase_switch = Gtk.Template.Child()
-    skip_duplicated_colors_switch = Gtk.Template.Child()
-    default_format_switch = Gtk.Template.Child()
 
     image_mimetypes = (
         'image/png',
@@ -199,7 +193,7 @@ class PigmentWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
         self.get_application().create_action('select', lambda *_: self.select_requested(), ['<primary>E'])
         self.get_application().create_action('generate', lambda *_: threading.Thread(target=self.generate_requested).start(), ['<primary>R'])
-        self.get_application().create_action('preferences', lambda *_: self.preferences_dialog.present(self), ['<primary>comma'])
+        self.get_application().create_action('preferences', lambda *_: PreferencesDialog().present(self), ['<primary>comma'])
         self.get_application().create_action('screenshot', lambda *_: self.screenshot_requested(), ['<primary>S'])
         self.get_application().create_action('copy_all', lambda *_: self.copy_all_requested())
         self.get_application().lookup_action('copy_all').set_enabled(False)
@@ -212,8 +206,8 @@ class PigmentWindow(Adw.ApplicationWindow):
             drop_target.connect("drop", lambda target, file, x, y: self.on_select(file))
             widget.add_controller(drop_target)
 
-
         self.settings = Gio.Settings(schema_id='com.jeffser.Pigment')
+
         for setting in ('default-width', 'default-height', 'maximized'):
             self.settings.bind(
                 setting,
@@ -221,34 +215,6 @@ class PigmentWindow(Adw.ApplicationWindow):
                 setting,
                 Gio.SettingsBindFlags.DEFAULT
             )
-
-        self.settings.bind(
-            'autogenerate',
-            self.autogenerate_switch,
-            'active',
-            Gio.SettingsBindFlags.DEFAULT
-        )
-
-        self.settings.bind(
-            'format-uppercase',
-            self.uppercase_switch,
-            'active',
-            Gio.SettingsBindFlags.DEFAULT
-        )
-
-        self.settings.bind(
-            'skip-duplicated-colors',
-            self.skip_duplicated_colors_switch,
-            'active',
-            Gio.SettingsBindFlags.DEFAULT
-        )
-
-        self.settings.bind(
-            'default-format',
-            self.default_format_switch,
-            'selected',
-            Gio.SettingsBindFlags.DEFAULT
-        )
 
         self.settings.bind(
             'color-quality',

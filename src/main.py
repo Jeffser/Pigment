@@ -23,7 +23,7 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GLib
 from .window import PigmentWindow
 
 TRANSLATORS = [
@@ -58,12 +58,19 @@ class PigmentApplication(Adw.Application):
         self.version = version
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
+        self.create_action('shortcuts', lambda *_: GLib.idle_add(self.show_shortcuts_dialog), ['<primary>slash'])
 
     def do_activate(self):
         win = self.props.active_window
         if not win:
             win = PigmentWindow(application=self)
         win.present()
+
+    def show_shortcuts_dialog(self):
+        builder = Gtk.Builder()
+        builder.add_from_resource("/com/jeffser/Pigment/shortcuts.ui")
+        dialog = builder.get_object("shortcuts_dialog")
+        dialog.present(self.props.active_window)
 
     def on_about_action(self, *args):
         about = Adw.AboutDialog(application_name='Pigment',
