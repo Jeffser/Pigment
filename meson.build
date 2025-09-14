@@ -1,5 +1,5 @@
 project('pigment',
-          version: '0.5.1',
+          version: '0.5.5',
     meson_version: '>= 1.0.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
