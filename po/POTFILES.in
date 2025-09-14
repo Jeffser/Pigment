@@ -2,5 +2,8 @@ data/com.jeffser.Pigment.metainfo.xml.in
 data/com.jeffser.Pigment.gschema.xml
 src/main.py
 src/window.py
-src/window.ui
 src/widgets.py
+
+src/ui/preferences.blp
+src/ui/shortcuts.blp
+src/ui/window.blp
