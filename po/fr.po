@@ -1,0 +1,242 @@
+# French translations for Pigment package.
+# Copyright (C) 2025 Jeffry Samuel Eduarte Rojas
+# This file is distributed under the same license as the Pigment package.
+# Jeffry Samuel Eduarte Rojas <jeffrysamuer@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-14 01:23-0600\n"
+"PO-Revision-Date: 2025-11-29 23:05+0100\n"
+"Last-Translator: Philippe Charlanes <pcharlanes@gmail.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:7 src/ui/window.blp:5
+msgid "Pigment"
+msgstr "Pigment"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:8
+msgid "Get color palettes from images"
+msgstr "Extraire des palettes de couleurs à partir d'images"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:10
+msgid ""
+"Pigment allows you to extract a palette of colors from your images offline. "
+"You can select the speed and accuracy by modifying the number and quality of "
+"colors."
+msgstr ""
+"Pigment vous permet d'extraire une palette de couleurs de vos images hors "
+"ligne. Vous pouvez ajuster la vitesse et la précision en modifiant le "
+"nombre et la qualité des couleurs."
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:52
+msgid "Example image showing fish"
+msgstr "Exemple d'image montrant un poisson"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:56
+msgid "Example image showing Niko from Oneshot"
+msgstr "Exemple d'image montrant Niko de Oneshot"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:60
+msgid "Example image showing an alpaca"
+msgstr "Exemple d'image montrant un alpaga"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:64
+msgid "Example image showing a Japanese painting"
+msgstr "Exemple d'image montrant une peinture japonaise"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:72
+#: data/com.jeffser.Pigment.metainfo.xml.in:80
+msgid "New translations"
+msgstr "Nouvelles traductions"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Update runtime to Gnome 49"
+msgstr "Mise à jour du runtime vers Gnome 49"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:74
+msgid "New Gnome 49 shortcut dialog"
+msgstr "Nouveau dialogue des raccourcis de Gnome 49"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:81
+msgid "More Stable screenshots"
+msgstr "Captures d'écran plus stables"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:87
+msgid "Added German translation"
+msgstr "Ajout de la traduction allemande"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:88
+msgid "Changed wording from 'Upload' to 'Select'"
+msgstr "Changement de terme de 'Télécharger' à 'Sélectionner'"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:89
+msgid "Added option to skip duplicated colors"
+msgstr "Ajout de l'option d'ignorer les couleurs dupliquées"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:95
+msgid "Added Telugu translation"
+msgstr "Ajout de la traduction telugu"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:96
+msgid "Added option to take screenshots"
+msgstr "Ajout de l'option de prendre des captures d'écran"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:97
+msgid "Added option to copy the whole palette"
+msgstr "Ajout de l'option de copier toute la palette"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:103
+msgid "Added option to capitalize colors"
+msgstr "Ajout de l'option de mettre les couleurs en majuscules"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:104
+msgid "Better metadata for distribution"
+msgstr "Meilleures métadonnées pour la distribution"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:110
+msgid "New icon"
+msgstr "Nouvelle icône"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:111
+msgid "Removed unnecessary permissions to access network"
+msgstr "Suppression des permissions inutiles pour l'accès au réseau"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:112
+msgid "Added translation to spanish"
+msgstr "Ajout de la traduction en espagnol"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:118
+msgid "Initial Release"
+msgstr "Version initiale"
+
+#: src/window.py:59
+msgid "Image files"
+msgstr "Fichiers image"
+
+#: src/window.py:68
+msgid "Palette copied to clipboard."
+msgstr "Palette copiée dans le presse-papiers."
+
+#: src/window.py:68
+msgid "Color copied to clipboard."
+msgstr "Couleur copiée dans le presse-papiers."
+
+#: src/window.py:124
+#, python-brace-format
+msgid "Error generating palette: {}"
+msgstr "Erreur lors de la génération de la palette : {}"
+
+#: src/window.py:141
+msgid "Click the image or drop a file into it to generate another palette!"
+msgstr "Cliquez sur l'image ou déposez-y un fichier pour générer une autre palette !"
+
+#: src/widgets.py:98 src/widgets.py:124
+msgid "Copy Color"
+msgstr "Copier la couleur"
+
+#: src/ui/preferences.blp:8
+msgid "Autogenerate Palette After Selecting Image"
+msgstr "Générer la palette automatiquement après la sélection de l'image"
+
+#: src/ui/preferences.blp:12
+msgid "Display Colors in Uppercase"
+msgstr "Afficher les couleurs en majuscules"
+
+#: src/ui/preferences.blp:16
+msgid "Skip Duplicate Colors in the Palette"
+msgstr "Ignorer les couleurs dupliquées dans la palette"
+
+#: src/ui/preferences.blp:20
+msgid "Default Color Format"
+msgstr "Format de couleur par défaut"
+
+#: src/ui/shortcuts.blp:5
+msgid "General"
+msgstr "Général"
+
+#: src/ui/shortcuts.blp:8
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Afficher les raccourcis"
+
+#: src/ui/shortcuts.blp:13
+msgctxt "shortcut window"
+msgid "Generate Palette"
+msgstr "Générer la palette"
+
+#: src/ui/shortcuts.blp:18
+msgctxt "shortcut window"
+msgid "Select Image"
+msgstr "Sélectionner une image"
+
+#: src/ui/shortcuts.blp:23
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitter"
+
+#: src/ui/window.blp:24
+msgid "Copy Palette"
+msgstr "Copier la palette"
+
+#: src/ui/window.blp:35
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: src/ui/window.blp:49
+msgid "Select an image to get started!"
+msgstr "Sélectionnez une image pour commencer !"
+
+#: src/ui/window.blp:63
+msgid "Select Image"
+msgstr "Sélectionner une image"
+
+#: src/ui/window.blp:79 src/ui/window.blp:233
+msgid "Take Screenshot"
+msgstr "Prendre une capture d'écran"
+
+#: src/ui/window.blp:154
+msgid "Quality"
+msgstr "Qualité"
+
+#: src/ui/window.blp:165
+msgid "Number of Colors"
+msgstr "Nombre de couleurs"
+
+#: src/ui/window.blp:176
+msgid "Generate Palette"
+msgstr "Générer la palette"
+
+#: src/ui/window.blp:196
+msgid "Start by generating a palette"
+msgstr "Commencez par générer une palette"
+
+#: src/ui/window.blp:228
+msgid "Preferences"
+msgstr "Préférences"
+
+#: src/ui/window.blp:238
+msgid "Keyboard Shortcuts"
+msgstr "Raccourcis clavier"
+
+#: src/ui/window.blp:243
+msgid "About Pigment"
+msgstr "À propos de Pigment"
+
+#~ msgid "Upload Image"
+#~ msgstr "Télécharger une image"
+
+#~ msgid "Autogenerate Palette After Uploading Image"
+#~ msgstr "Générer la palette automatiquement après le téléchargement de l'image"
+
+#~ msgid "Extract color palettes from your images"
+#~ msgstr "Extraire des palettes de couleurs de vos images"
+
+#~ msgid "Example image showing fishes"
+#~ msgstr "Exemple d'image montrant des poissons"
