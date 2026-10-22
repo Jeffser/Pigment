@@ -1,0 +1,229 @@
+# Croatian translation for Pigment.
+# Copyright (C) 2025 Jeffry Samuel Eduarte Rojas
+# This file is distributed under the same license as the Pigment package.
+# Milo Ivir <mail@milotype.de>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-14 01:23-0600\n"
+"PO-Revision-Date: 2026-10-22 22:16+0200\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.10\n"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:7 src/ui/window.blp:5
+msgid "Pigment"
+msgstr "Pigment"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:8
+msgid "Get color palettes from images"
+msgstr "Nabavi palete boja iz slika"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:10
+msgid ""
+"Pigment allows you to extract a palette of colors from your images offline. "
+"You can select the speed and accuracy by modifying the number and quality of "
+"colors."
+msgstr ""
+"Pigment omogućuje izdvajanje palete boja iz slika offline. Odaberi brzinu i "
+"točnost mijenjanjem broja i kvalitete boja."
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:52
+msgid "Example image showing fish"
+msgstr "Primjer slike koja prikazuje ribu"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:56
+msgid "Example image showing Niko from Oneshot"
+msgstr "Primjer slike koja prikazuje Nika iz Oneshota"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:60
+msgid "Example image showing an alpaca"
+msgstr "Primjer slike koja prikazuje alpaku"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:64
+msgid "Example image showing a Japanese painting"
+msgstr "Primjer slike koja prikazuje japansku sliku"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:72
+#: data/com.jeffser.Pigment.metainfo.xml.in:80
+msgid "New translations"
+msgstr "Novi prijevodi"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:73
+msgid "Update runtime to Gnome 49"
+msgstr "Aktualiziraj vrijeme izvođenja na Gnome 49"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:74
+msgid "New Gnome 49 shortcut dialog"
+msgstr "Novi dijalozi prečaca u Gnome 49"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:81
+msgid "More Stable screenshots"
+msgstr "Stabilnije snimke ekrana"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:87
+msgid "Added German translation"
+msgstr "Dodan je prijevod za njemački"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:88
+msgid "Changed wording from 'Upload' to 'Select'"
+msgstr "Promijenjena formulacija iz „Prenesi” u „Odaberi”"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:89
+msgid "Added option to skip duplicated colors"
+msgstr "Dodana je opcija za preskakanje duplih boja"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:95
+msgid "Added Telugu translation"
+msgstr "Dodan je prijevod za telugu"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:96
+msgid "Added option to take screenshots"
+msgstr "Dodana je opcija za snimanje snimaka ekrana"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:97
+msgid "Added option to copy the whole palette"
+msgstr "Dodana je opcija za kopiranje cijele palete"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:103
+msgid "Added option to capitalize colors"
+msgstr "Dodana je opcija za pisanje boja velikim slovima"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:104
+msgid "Better metadata for distribution"
+msgstr "Bolji metapodaci za distribuciju"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:110
+msgid "New icon"
+msgstr "Nova ikona"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:111
+msgid "Removed unnecessary permissions to access network"
+msgstr "Uklonjene su nepotrebne dozvole za pristup mreži"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:112
+msgid "Added translation to spanish"
+msgstr "Dodan je prijevod za španjolski"
+
+#: data/com.jeffser.Pigment.metainfo.xml.in:118
+msgid "Initial Release"
+msgstr "Prvo izdanje"
+
+#: src/window.py:59
+msgid "Image files"
+msgstr "Slikovne datoteke"
+
+#: src/window.py:68
+msgid "Palette copied to clipboard."
+msgstr "Paleta je kopirana u međuspremnik."
+
+#: src/window.py:68
+msgid "Color copied to clipboard."
+msgstr "Boja je kopirana u međuspremnik."
+
+#: src/window.py:124
+#, python-brace-format
+msgid "Error generating palette: {}"
+msgstr "Greška prilikom generiranja palete: {}"
+
+#: src/window.py:141
+msgid "Click the image or drop a file into it to generate another palette!"
+msgstr "Klikni na sliku ili otpusti datoteku u nju za generiranje nove palete!"
+
+#: src/widgets.py:98 src/widgets.py:124
+msgid "Copy Color"
+msgstr "Kopiraj boju"
+
+#: src/ui/preferences.blp:8
+msgid "Autogenerate Palette After Selecting Image"
+msgstr "Automatski generiraj palete nakon odabira slike"
+
+#: src/ui/preferences.blp:12
+msgid "Display Colors in Uppercase"
+msgstr "Prikaži boje velikim slovima"
+
+#: src/ui/preferences.blp:16
+msgid "Skip Duplicate Colors in the Palette"
+msgstr "Preskoči duple boje u paleti"
+
+#: src/ui/preferences.blp:20
+msgid "Default Color Format"
+msgstr "Standardni format boja"
+
+#: src/ui/shortcuts.blp:5
+msgid "General"
+msgstr "Opće"
+
+#: src/ui/shortcuts.blp:8
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Prikaži prečace"
+
+#: src/ui/shortcuts.blp:13
+msgctxt "shortcut window"
+msgid "Generate Palette"
+msgstr "Generiraj paletu"
+
+#: src/ui/shortcuts.blp:18
+msgctxt "shortcut window"
+msgid "Select Image"
+msgstr "Odaberi sliku"
+
+#: src/ui/shortcuts.blp:23
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Zatvori aplikaciju"
+
+#: src/ui/window.blp:24
+msgid "Copy Palette"
+msgstr "Kopiraj paletu"
+
+#: src/ui/window.blp:35
+msgid "Main Menu"
+msgstr "Glavni izbornik"
+
+#: src/ui/window.blp:49
+msgid "Select an image to get started!"
+msgstr "Odaberi sliku i započni!"
+
+#: src/ui/window.blp:63
+msgid "Select Image"
+msgstr "Odaberi sliku"
+
+#: src/ui/window.blp:79 src/ui/window.blp:233
+msgid "Take Screenshot"
+msgstr "Snimi snimku ekrana"
+
+#: src/ui/window.blp:154
+msgid "Quality"
+msgstr "Kvaliteta"
+
+#: src/ui/window.blp:165
+msgid "Number of Colors"
+msgstr "Broj boja"
+
+#: src/ui/window.blp:176
+msgid "Generate Palette"
+msgstr "Generiraj paletu"
+
+#: src/ui/window.blp:196
+msgid "Start by generating a palette"
+msgstr "Započni generiranjem palete"
+
+#: src/ui/window.blp:228
+msgid "Preferences"
+msgstr "Postavke"
+
+#: src/ui/window.blp:238
+msgid "Keyboard Shortcuts"
+msgstr "Tipkovni prečaci"
+
+#: src/ui/window.blp:243
+msgid "About Pigment"
+msgstr "O aplikaciji Pigment"
